@@ -1,17 +1,43 @@
 import { StatusBar } from 'expo-status-bar';
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+// Rest of the import statements
+import { useFonts } from 'expo-font';
+
+// export default function App() {
+//   const [fontsLoaded] = useFonts({
+//     'jetBrainsMono': require( './src/assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf'),
+//   });
+// }
+
+
+// import AppLoading from 'expo-app-loading';
+// import {
+//   useFonts,
+//   Poppins_100Thin,
+//   Poppins_100Thin_Italic,
+//   Poppins_200ExtraLight,
+
+// } from '@expo-google-fonts/poppins';
+
 
 
 export default function App() {
   return (
 
+    // let [fontsLoaded, fontError] = useFonts({
+    //   Inter_900Black,
+    // });
+  
+    // if (!fontsLoaded && !fontError) {
+    //   return null;
+    // }
     
 
     <View style={styles.container}>
  
       <Image 
         style ={styles.image}
-      source={require('./src/assets/images/Logo User.png')}
+      source={require('./src/assets/images/Sample_User_Icon.png')}
       />
       <TextInput
         style={styles.input}
@@ -45,13 +71,15 @@ const styles = StyleSheet.create({
   input :{
     width: '90%',
     height: 40,
-    borderWidth:1,
+    borderWidth:2,
     padding: 10,
     marginTop: 10,
     color:'#14CECE',
     backgroundColor: '#fff'
   },
   image:{
+    marginTop: 10,
+    marginBottom:50,
     height:200 ,
     width: 200
   },
@@ -71,4 +99,5 @@ const styles = StyleSheet.create({
     fontSize:18
     
   }
+  
 });
