@@ -12,6 +12,6 @@ export const Container2 = styled.View`
     gap:10px;
    padding:100px;
    border-Width:0;
-   background-color:#c1c1c1;
+   background-color:goldenrod;
   border-radius: 7px;
 `
