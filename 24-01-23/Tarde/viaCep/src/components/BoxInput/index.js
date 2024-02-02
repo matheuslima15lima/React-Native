@@ -1,27 +1,29 @@
+import { Input } from "../Input"
+import { Label } from "../Label"
 import { FieldContent } from "./style"
 
 export const BoxInput = ({
     fieldWidth = 100,
-    editable= false,
+    editable = false,
     textLabel,
     placeholder,
     fieldValue = null,
     onChangeText = null,
-    keyType ='default',
+    keyType = 'default',
     maxLength,
 }) => {
-    return(
+    return (
         <FieldContent fieldWidth={fieldWidth}>
-        <Label textLabel={textLabel}/>
+            <Label textLabel={textLabel} />
 
-        <Input 
-            editable={editable}
-            placeholder={placeholder}
-            keyType={keyType}
-            maxLength={maxLength}
-            fieldValue={fieldValue}
-            onChangeText={onChangeText}
-        />
+            <Input
+                editable={editable}
+                placeholder={placeholder}
+                keyType={keyType}
+                maxLength={maxLength}
+                fieldValue={fieldValue}
+                onChangeText={onChangeText}
+            />
         </FieldContent>
     )
 }

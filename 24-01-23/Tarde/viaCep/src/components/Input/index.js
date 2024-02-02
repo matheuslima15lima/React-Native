@@ -1,3 +1,5 @@
+import { InputText } from "./style"
+
 export const Input=({
     placeholder,
     editable,

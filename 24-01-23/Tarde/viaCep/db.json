@@ -1,0 +1,12 @@
+{
+    "cep":[
+        {
+            "id":1,
+            "logradouro":"rua la de casa",
+            "bairro":"Bairro",
+            "localidade":"cidade do cara",
+            "Estado":"sampa",
+            "uf":"SP"
+        }
+    ]
+}
