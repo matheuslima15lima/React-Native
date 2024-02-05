@@ -1,15 +1,48 @@
 
 import { ContainerForm, ContainerInput, ScrollForm } from "./style";
 import {BoxInput} from '../../components/BoxInput/index'
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import reactNativeAxios from 'react-native'
 
 export function Home() {
-    const[cep, setCep] = useState('000');
-    const[logradouro, setLogradouro] = useState('000');
-    const[bairro, setBairro] = useState('000');
-    const[cidade, setCidade] = useState('000');
-    const[estado, setEstado] = useState('000');
-    const[uf, setUf] = useState('000');
+   
+    const[cep, setCep] = useState('');
+    const[logradouro, setLogradouro] = useState('');
+    const[bairro, setBairro] = useState('');
+    const[cidade, setCidade] = useState('');
+    const[estado, setEstado] = useState('');
+    const[uf, setUf] = useState('');
+
+    useEffect(()=>{
+        async function buscarCep() {
+            try {
+                if (cep != '' && cep.length === 8) {
+                    const endereco = await reactNativeAxios.get(`https://brasilaberto.com/api/v1/zipcode/${cep}` )
+
+                    if (endereco.error){
+                        return;
+                    }
+    
+                    
+                    setBairro(endereco.data.result.district);
+                    setLogradouro(endereco.data.result.street);
+                    setCidade(endereco.data.result.city);
+                    setEstado(endereco.data.result.state);
+                    setUf(endereco.data.result.stateShortname)
+                    
+                    
+                }
+
+           
+            } catch (error) {
+                
+            }
+            
+        }
+        buscarCep();
+    },[cep]);
+    
     
     return (
         <ScrollForm>
@@ -18,10 +51,11 @@ export function Home() {
                 textLabel="informar CEP"
                     placeholder='Cep...'
                     editable={true}
-                    keyType='numeric'
+                   
                     maxLength={9}
                     fieldValue={cep}
                     onChangeText={(tx)=>{setCep(tx)}}
+                    onBlur={()=>{buscarCep}}
                 />
                 <BoxInput
                     textLabel="Logradouro"
@@ -29,11 +63,12 @@ export function Home() {
                     placeholder='Logradouro...'
                     fieldValue={logradouro}
                     onChangeText={(tx)=> {setLogradouro(tx)}} //tx = evento de mudar o texto
+                    
                 />
                 <BoxInput
                 textLabel="Bairro"
                     placeholder='Bairro...'
-                    maxLength={9}
+                    maxLength={200}
                     editable={true}
                     fieldWidth={100}
                     fieldValue={bairro}
@@ -42,9 +77,9 @@ export function Home() {
                 <BoxInput
                 textLabel="Cidade"
                     placeholder='Cidade...'
-                    keyType='numeric'
+                   
                     editable={true}
-                    maxLength={9}
+                    maxLength={200}
                     fieldWidth={100}
                     fieldValue={cidade}
                     onChangeText={(tx)=>{setCidade(tx)}}
@@ -54,7 +89,7 @@ export function Home() {
                 <BoxInput
                 textLabel="Estado"
                     placeholder='Estado...'
-                    keyType='numeric'
+                   
                     maxLength={9}
                     fieldWidth={60}
                     editable={true}
@@ -64,12 +99,12 @@ export function Home() {
                 <BoxInput
                 textLabel="UF"
                     placeholder='UF...'
-                    keyType='numeric'
+                  
                     maxLength={9}
                     fieldWidth={30}
                     fieldValue={uf}
                     editable={true}
-                    onChangeText={(tx)=>{setUf(tx)}}
+                   onChangeText={(tx)=>{setUf(tx)}}
                 />
                 </ContainerInput>
             </ContainerForm>
