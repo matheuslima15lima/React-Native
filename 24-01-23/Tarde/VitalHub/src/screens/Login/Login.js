@@ -1,8 +1,13 @@
-import { Text } from "react-native"
+import { Image, Text } from "react-native"
 import { Container } from "../../components/Container/Style"
 import { Logo } from "../../components/Logo/Style"
-import { Title } from "../../components/Title/Style"
+import { TextAccount, Title, TitleBtn, TitleGoogle } from "../../components/Title/Style"
 import { Input } from "../../components/Input/Style"
+import { Link, LinkAccount } from "../../components/Link/Style"
+import { Btn, GoogleBtn } from "../../components/Button/Style"
+import { ImageBtn } from "../../components/Image/Style"
+import { AntDesign } from '@expo/vector-icons';
+import { ContentAccount } from "../../components/ContentAccount/Style"
 export const Login = ()=>{
     return(
         <Container>
@@ -18,6 +23,26 @@ export const Login = ()=>{
             <Input
                   placeholder="Senha"
             />
+
+            <Link>Esqueceu a senha?</Link>
+
+            <Btn>
+                <TitleBtn>Entrar</TitleBtn>
+            </Btn>
+
+            <GoogleBtn>
+                
+            <AntDesign name="google" size={20} color="#496BBA" />
+                <TitleGoogle>Entrar com Google</TitleGoogle>
+                
+            </GoogleBtn>
+
+            <ContentAccount>
+                <TextAccount>Nao tem conta?</TextAccount>
+                <LinkAccount>Crie uma conta agora!</LinkAccount>
+            </ContentAccount>
+            
+            
             {/* 
            
             

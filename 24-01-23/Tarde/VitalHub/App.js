@@ -5,11 +5,20 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Navegacao } from './src/screens/Navegacao/Navegacao';
 import { Login } from './src/screens/Login/Login';
 import { useFonts, MontserratAlternates_600SemiBold } from '@expo-google-fonts/montserrat-alternates';
+import{MontserratAlternates_500Medium} from '@expo-google-fonts/montserrat-alternates'
+import { MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates';
+import { RecoverPwd } from './src/screens/RecoverPwd/RecoverPwd';
+import{Quicksand_500Medium} from '@expo-google-fonts/quicksand'
 const Stack = createNativeStackNavigator();
 export default function App() {
 
   let [fontsLoaded, fontError] = useFonts({
-    MontserratAlternates_600SemiBold
+    MontserratAlternates_600SemiBold,
+    MontserratAlternates_500Medium,
+    MontserratAlternates_700Bold,
+    Quicksand_500Medium
+
+
 });
 
 if (!fontsLoaded && !fontError) {
@@ -33,6 +42,11 @@ if (!fontsLoaded && !fontError) {
             name="Login"
             component={Login}
             options={{title:"Login"}}
+            />
+             <Stack.Screen
+            name="Recuperar Senha"
+            component={RecoverPwd}
+            options={{title:"Recuperar Senha"}}
             />
           </Stack.Navigator>
         </NavigationContainer>
