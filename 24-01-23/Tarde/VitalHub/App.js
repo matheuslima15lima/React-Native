@@ -8,7 +8,12 @@ import { useFonts, MontserratAlternates_600SemiBold } from '@expo-google-fonts/m
 import{MontserratAlternates_500Medium} from '@expo-google-fonts/montserrat-alternates'
 import { MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates';
 import { RecoverPwd } from './src/screens/RecoverPwd/RecoverPwd';
-import{Quicksand_500Medium} from '@expo-google-fonts/quicksand'
+import{Quicksand_600SemiBold} from '@expo-google-fonts/quicksand'
+import{MontserratAlternates_800ExtraBold_Italic} from '@expo-google-fonts/montserrat-alternates'
+import { VerifyEmail } from './src/screens/VerifyEmail/VerifyEmail';
+import { ResetPwd } from './src/screens/ResetPwd/ResetPwd';
+import { CreateAcnt } from './src/screens/CreateAcnt/CreateAcnt';
+import { Profile } from './src/screens/Profile/Profile';
 const Stack = createNativeStackNavigator();
 export default function App() {
 
@@ -16,7 +21,9 @@ export default function App() {
     MontserratAlternates_600SemiBold,
     MontserratAlternates_500Medium,
     MontserratAlternates_700Bold,
-    Quicksand_500Medium
+    Quicksand_600SemiBold,
+    MontserratAlternates_800ExtraBold_Italic
+
 
 
 });
@@ -47,6 +54,28 @@ if (!fontsLoaded && !fontError) {
             name="Recuperar Senha"
             component={RecoverPwd}
             options={{title:"Recuperar Senha"}}
+            />
+
+            <Stack.Screen
+                name="Verifique seu E-mail"
+                component={VerifyEmail}
+                options={{title:"Verifique seu E-mail"}}
+            />
+
+            <Stack.Screen
+                name="Redefinir Senha"
+                component={ResetPwd}
+                options={{title:"Redefinir Senha"}}
+            />
+            <Stack.Screen
+                name="Criar conta"
+                component={CreateAcnt}
+                options={{title:"Criar conta"}}
+            />
+            <Stack.Screen
+                name="Pagina de perfil"
+                component={Profile}
+                options={{title:"Pagina de perfil"}}
             />
           </Stack.Navigator>
         </NavigationContainer>

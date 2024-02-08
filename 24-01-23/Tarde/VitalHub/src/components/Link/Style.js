@@ -13,3 +13,7 @@ export const Link = styled.Text`
 export const LinkAccount = styled(Link)`
     color:#4D659D;
 `
+
+export const LinkProfile =  styled(Link)`
+    color:#5F5C6B;
+`

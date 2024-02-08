@@ -5,7 +5,6 @@ import { TextAccount, Title, TitleBtn, TitleGoogle } from "../../components/Titl
 import { Input } from "../../components/Input/Style"
 import { Link, LinkAccount } from "../../components/Link/Style"
 import { Btn, GoogleBtn } from "../../components/Button/Style"
-import { ImageBtn } from "../../components/Image/Style"
 import { AntDesign } from '@expo/vector-icons';
 import { ContentAccount } from "../../components/ContentAccount/Style"
 export const Login = ()=>{
@@ -27,7 +26,7 @@ export const Login = ()=>{
             <Link>Esqueceu a senha?</Link>
 
             <Btn>
-                <TitleBtn>Entrar</TitleBtn>
+                <TitleBtn>ENTRAR</TitleBtn>
             </Btn>
 
             <GoogleBtn>

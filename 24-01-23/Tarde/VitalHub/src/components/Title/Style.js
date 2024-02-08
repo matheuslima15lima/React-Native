@@ -4,7 +4,9 @@ export const Title = styled.Text`
     font-family: 'MontserratAlternates_600SemiBold';
     font-size:20px;
     color:#33303e;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+
+    /* margin-top:25px; */
 `
 export const TitleBtn = styled.Text`
     font-family: 'MontserratAlternates_700Bold';
@@ -32,4 +34,6 @@ export const Subtitle = styled.Text`
     color:#5F5C6B;
     width:90%;
     font-size: 16px;
+    margin-top: 15px;
+    text-align:center
 `

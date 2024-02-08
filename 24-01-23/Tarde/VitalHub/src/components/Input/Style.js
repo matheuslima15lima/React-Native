@@ -12,3 +12,13 @@ export const Input = styled.TextInput.attrs({placeholderTextColor:"#34898f"})`
     font-family: ' MontserratAlternates_600SemiBold';
     color:#34898f;
 `
+
+export const InputNumber = styled(Input)`
+    width: 65px;
+    height:62px;
+    font-size: 30px;
+    font-family: 'Quicksand_600SemiBold';
+    text-align: center;
+   
+       
+`
