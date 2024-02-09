@@ -5,5 +5,13 @@ export const Container = styled.SafeAreaView`
     background-color: #FAFAFA;
     
 `
+export const Scrool = styled.ScrollView`
+     height:80%;
+`
 
+export const ContainerInput = styled.View`
+    flex-direction: row;
+    justify-content:space-between;
+    margin-left: 20px;
+`
 

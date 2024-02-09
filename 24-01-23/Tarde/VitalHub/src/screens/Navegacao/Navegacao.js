@@ -28,6 +28,10 @@ export const Navegacao = ({navigation})=>{
                     title="Pagina de perfil" 
                     onPress={()=> navigation.navigate("Pagina de perfil")}    
             />
+            <Button
+                    title="Prontuario" 
+                    onPress={()=> navigation.navigate("Prontuario")}    
+            />
         </View>
     )
 }

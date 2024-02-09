@@ -16,6 +16,7 @@ export const ContentAccountN = styled(ContentAccount)`
 
 export const ContentAccountCenter = styled.View`
     align-self: center;
+ 
 `
 
 export const ContentProfille = styled.View`
@@ -28,6 +29,14 @@ top:230px;
 left:10%;
 background-color:white;
 align-items:center;
+justify-content:center;
+text-align:center;
+
+shadow-color:'black';
+    shadow-opacity:0.26;
+    shadow-offset:20px 20px;
+    shadow-radius:10px;
+    elevation:5;
 `
 
 

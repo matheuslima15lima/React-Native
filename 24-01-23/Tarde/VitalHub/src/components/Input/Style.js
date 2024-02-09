@@ -22,3 +22,13 @@ export const InputNumber = styled(Input)`
    
        
 `
+export const InputProfile = styled(Input)`
+    border:2px solid #F5F3F3;
+    border-radius:5px;
+    margin-top:0px;
+    background-color:#F5F3F3;
+`
+export const InputSmaller = styled(InputProfile)`
+    width:70%;
+    margin-bottom: 0px;
+`

@@ -7,5 +7,6 @@ export const Logo = styled.Image`
 
 export const ProfileImg = styled.ImageBackground`
     height:280;
-    width:360;
+    width:100%;
+    margin-bottom:60px;
 `

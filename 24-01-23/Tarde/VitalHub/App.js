@@ -14,6 +14,7 @@ import { VerifyEmail } from './src/screens/VerifyEmail/VerifyEmail';
 import { ResetPwd } from './src/screens/ResetPwd/ResetPwd';
 import { CreateAcnt } from './src/screens/CreateAcnt/CreateAcnt';
 import { Profile } from './src/screens/Profile/Profile';
+import { MedicalRecord } from './src/screens/MedRecord/MedRecord';
 const Stack = createNativeStackNavigator();
 export default function App() {
 
@@ -76,6 +77,11 @@ if (!fontsLoaded && !fontError) {
                 name="Pagina de perfil"
                 component={Profile}
                 options={{title:"Pagina de perfil"}}
+            />
+            <Stack.Screen
+                name="Prontuario"
+                component={MedicalRecord}
+                options={{title:"Prontuario"}}
             />
           </Stack.Navigator>
         </NavigationContainer>
