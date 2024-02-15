@@ -14,7 +14,7 @@ export const Input = styled.TextInput.attrs({placeholderTextColor:"#34898f"})`
 `
 
 export const InputNumber = styled(Input)`
-    width: 65px;
+    width: 90%;
     height:62px;
     font-size: 30px;
     font-family: 'Quicksand_600SemiBold';
@@ -27,6 +27,7 @@ export const InputProfile = styled(Input)`
     border-radius:5px;
     margin-top:0px;
     background-color:#F5F3F3;
+    
 `
 export const InputSmaller = styled(InputProfile)`
     width:70%;

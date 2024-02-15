@@ -10,3 +10,15 @@ export const ProfileImg = styled.ImageBackground`
     width:100%;
     margin-bottom:60px;
 `
+
+export const ImageUser = styled.ImageBackground`
+    height:60px;
+    width:60px;
+    
+    
+`
+
+export const ImageBell = styled.ImageBackground`
+    height: 25px;
+    width:25px;
+`

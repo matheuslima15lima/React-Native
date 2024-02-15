@@ -9,12 +9,14 @@ import{MontserratAlternates_500Medium} from '@expo-google-fonts/montserrat-alter
 import { MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates';
 import { RecoverPwd } from './src/screens/RecoverPwd/RecoverPwd';
 import{Quicksand_600SemiBold} from '@expo-google-fonts/quicksand'
+import{Quicksand_500Medium} from '@expo-google-fonts/quicksand'
 import{MontserratAlternates_800ExtraBold_Italic} from '@expo-google-fonts/montserrat-alternates'
 import { VerifyEmail } from './src/screens/VerifyEmail/VerifyEmail';
 import { ResetPwd } from './src/screens/ResetPwd/ResetPwd';
 import { CreateAcnt } from './src/screens/CreateAcnt/CreateAcnt';
 import { Profile } from './src/screens/Profile/Profile';
 import { MedicalRecord } from './src/screens/MedRecord/MedRecord';
+import { Home } from './src/screens/Home/Home';
 const Stack = createNativeStackNavigator();
 export default function App() {
 
@@ -23,6 +25,7 @@ export default function App() {
     MontserratAlternates_500Medium,
     MontserratAlternates_700Bold,
     Quicksand_600SemiBold,
+    Quicksand_500Medium,
     MontserratAlternates_800ExtraBold_Italic
 
 
@@ -82,6 +85,11 @@ if (!fontsLoaded && !fontError) {
                 name="Prontuario"
                 component={MedicalRecord}
                 options={{title:"Prontuario"}}
+            />
+            <Stack.Screen
+                name="Pagina Home"
+                component={Home}
+                options={{title:"Pagina Home"}}
             />
           </Stack.Navigator>
         </NavigationContainer>

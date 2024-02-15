@@ -19,3 +19,7 @@ export const GoogleBtn = styled(Btn)`
     flex-direction: row;
     gap: 20px;
 `
+
+export const BtnQuery = styled(Btn)`
+    height:35px;
+`

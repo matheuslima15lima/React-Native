@@ -15,6 +15,9 @@ export const TitleBtn = styled.Text`
    
 
 `
+export const TitleQuery = styled(Title)`
+    font-family:12px ;
+`
 export const TitleGoogle = styled(TitleBtn)`
     color:#496BBA;
     font-size: 14px;
@@ -45,4 +48,9 @@ export const Label = styled.Text`
 
 export const TextProfile = styled(TextAccount)`
     color:#33303E;
+`
+export const TitleHome  = styled(Title)`
+    color:#4E4B59;
+    align-self:flex-start;
+    margin-left: 22px;
 `

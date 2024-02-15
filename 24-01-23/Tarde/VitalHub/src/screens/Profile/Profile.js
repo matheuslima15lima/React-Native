@@ -57,7 +57,9 @@ export const Profile = () => {
                 </BoxContainer>
             </ContainerInput>
 
-            <Btn><TitleBtn>Salvar</TitleBtn></Btn>
+            <Btn><TitleBtn>SALVAR</TitleBtn></Btn>
+
+            <Btn><TitleBtn>EDITAR</TitleBtn></Btn>
         </Container>
         </Scrool>
     )
