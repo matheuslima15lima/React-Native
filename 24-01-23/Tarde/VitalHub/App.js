@@ -17,6 +17,8 @@ import { CreateAcnt } from './src/screens/CreateAcnt/CreateAcnt';
 import { Profile } from './src/screens/Profile/Profile';
 import { MedicalRecord } from './src/screens/MedRecord/MedRecord';
 import { Home } from './src/screens/Home/Home';
+
+
 const Stack = createNativeStackNavigator();
 export default function App() {
 
@@ -35,6 +37,10 @@ export default function App() {
 if (!fontsLoaded && !fontError) {
   return null;
 }
+
+
+
+  
   return (
     //Container - envolve toda a estrutura de navegação
       //Navigator- componente para navegação

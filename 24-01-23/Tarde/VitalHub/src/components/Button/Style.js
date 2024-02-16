@@ -22,4 +22,9 @@ export const GoogleBtn = styled(Btn)`
 
 export const BtnQuery = styled(Btn)`
     height:35px;
+    width:100px;
 `
+
+ export const BtnQWhite = styled(BtnQuery)`
+    background-color:#FBFBFB;
+ `

@@ -16,7 +16,12 @@ export const TitleBtn = styled.Text`
 
 `
 export const TitleQuery = styled(Title)`
-    font-family:12px ;
+    font-size:12px ;
+    color:#FBFBFB;
+`
+export const TitleQuery2 = styled(TitleQuery)`
+    
+    color:#607EC5;
 `
 export const TitleGoogle = styled(TitleBtn)`
     color:#496BBA;
