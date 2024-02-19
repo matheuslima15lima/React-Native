@@ -12,6 +12,7 @@ export const Link = styled.Text`
 
 export const LinkAccount = styled(Link)`
     color:#4D659D;
+    margin-right: 16px;
 `
 
 export const LinkProfile =  styled(Link)`

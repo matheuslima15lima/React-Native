@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Navegacao } from './src/screens/Navegacao/Navegacao';
+import { Navegacao } from './src/screens/Navegacao/Navegacao'
 import { Login } from './src/screens/Login/Login';
 import { useFonts, MontserratAlternates_600SemiBold } from '@expo-google-fonts/montserrat-alternates';
 import{MontserratAlternates_500Medium} from '@expo-google-fonts/montserrat-alternates'

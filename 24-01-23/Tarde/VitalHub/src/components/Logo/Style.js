@@ -17,6 +17,11 @@ export const ImageUser = styled.ImageBackground`
     
     
 `
+export const ImagePacient = styled(ImageUser)`
+    height: 80px;
+    width:77px;
+    margin-top: 11px;
+`
 
 export const ImageBell = styled.ImageBackground`
     height: 25px;

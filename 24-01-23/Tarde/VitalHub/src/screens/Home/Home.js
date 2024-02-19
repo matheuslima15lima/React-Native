@@ -2,9 +2,9 @@
 import { BtnQWhite, BtnQuery } from "../../components/Button/Style"
 import CalendarHome from "../../components/CalendarHome/CalendarHome"
 import { Container } from "../../components/Container/Style"
-import { BoxUser, DataUser, HeaderContainer, NomeUser, TextDefault } from "../../components/Header/Style"
-import { ImageBell, ImageUser } from "../../components/Logo/Style"
-import { TitleBtn, TitleHome, TitleQuery, TitleQuery2 } from "../../components/Title/Style"
+import { BoxUser, ContainerCard, DataUser, HeaderContainer, NomeUser, TextDefault } from "../../components/Header/Style"
+import { ImageBell, ImagePacient, ImageUser } from "../../components/Logo/Style"
+import {TitleQuery, TitleQuery2 } from "../../components/Title/Style"
 
 
 export const Home = () => {
@@ -46,7 +46,11 @@ export const Home = () => {
                 </BtnQWhite>
             </BoxUser>
 
-
+            <ContainerCard>
+                <ImagePacient
+                    source={require('../../../src/assets/images/Rectangle 414.png')}
+                />
+            </ContainerCard>
 
         </Container>
     )
