@@ -17,10 +17,10 @@ export const ImageUser = styled.ImageBackground`
     
     
 `
-export const ImagePacient = styled(ImageUser)`
+export const ImagePacient = styled.Image`
     height: 80px;
     width:77px;
-   
+   border-radius:5px;
    
 `
 

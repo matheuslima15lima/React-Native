@@ -47,22 +47,17 @@ export const ContainerCard = styled.View`
 `
 
 export const DataUser = styled.View`
-    flex-direction:column;
-    margin-right:24px;
+    
+    gap:6px;
 `
 
 export const UserDataCard = styled.View`
     flex-direction:row; 
-    justify-content:space-between;
+    gap:15px;
+    
 `
-export const ContentHour = styled.View`
-    width:100px;
-    height:26px;
-    background-color: #E8FCFD;
-    border-radius: 5px;
-    padding:0px 0px 24px 24px;
-`
-export const UserAgeCard= styled.Text`
+
+export const UserAgeCard = styled.Text`
     font-size: 14px;
     font-family: ' Quicksand_400Regular';
     color:'#8C8A97';
@@ -71,6 +66,8 @@ export const UserAgeCard= styled.Text`
 export const UserQuery = styled.Text`
     font-size: 14px;
     font-family:'Quicksand_600SemiBold';
+    color:${(props) => props.situacao == 'pendente'? '#49B3BA': '#8C8A97'}
+    
 `
 export const TextDefault = styled.Text`
     font-family: 'Quicksand_500Medium';
