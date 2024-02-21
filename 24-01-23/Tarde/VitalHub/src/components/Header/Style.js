@@ -66,7 +66,7 @@ export const UserAgeCard = styled.Text`
 export const UserQuery = styled.Text`
     font-size: 14px;
     font-family:'Quicksand_600SemiBold';
-    color:${(props) => props.situacao == 'pendente'? '#49B3BA': '#8C8A97'}
+    color:${(props) => props.situacao == 'pendente'? '#49B3BA': '#8C8A97'};
     
 `
 export const TextDefault = styled.Text`

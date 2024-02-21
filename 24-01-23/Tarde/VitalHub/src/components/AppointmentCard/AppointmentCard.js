@@ -38,7 +38,7 @@ export const AppoimentCard = ({
                             <></>
                         ) :
                             situacao == "pendente" ? (
-                                <ButtonCard>
+                                <ButtonCard onPress={onPressCancel}>
                                     <ButtonText situacao={situacao}>Cancelar</ButtonText>
                                 </ButtonCard>
                             ) :

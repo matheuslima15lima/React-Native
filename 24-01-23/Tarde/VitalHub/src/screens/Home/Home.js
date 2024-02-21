@@ -9,6 +9,8 @@ import { TitleQuery, TitleQuery2 } from "../../components/Title/Style"
 import { BtnAppoiment } from "../../components/Button/BtnAppoiment"
 import { ListComponent } from "../../components/List/List"
 import { AppoimentCard } from "../../components/AppointmentCard/AppointmentCard"
+import { CancelationModal } from "../../components/CancelationModal/CancelationModal"
+import { ProfileModal } from "../../components/ProfileModal/ProfileModal"
 
 const Consultas = [
     { id: 1, nome: "Carlos", situacao: "pendente" },
@@ -18,7 +20,14 @@ const Consultas = [
     { id: 5, nome: "Carlos", situacao: "cancelado" },
 ]
 export const Home = () => {
+    //state para o estado da lista(cards)
     const [statusLista, setStatusLista] = useState("pendente")
+
+    //state para a exibicao dos modais
+
+    const [showModalCancel, setShowModalCancel] = useState(false);
+
+    const [showModalAppointment,setShowModalAppointment] = useState(false);
     return (
 
         <Container>
@@ -72,29 +81,22 @@ export const Home = () => {
                     statusLista == item.situacao && (
                         <AppoimentCard 
                         situacao={item.situacao}
+                        onPressCancel={()=>setShowModalCancel(true)}
+                        onPressAppoiment={()=> setShowModalAppointment(true)}
                         />
                     )
                 }
-
+                    showsVerticalScrollIndicator={false}
 
             />
-
-            {/* <ContainerCard>
-                <ImagePacient
-                    source={require('../../../src/assets/images/Rectangle 414.png')}
+            {/* modal cancelar */}
+                <CancelationModal
+                    visible={showModalCancel}
+                    setShowModalCancel={setShowModalCancel}
                 />
-                <DataUser>
-                    <NomeUserBlack>Niccole Sarga</NomeUserBlack>
-                    <UserDataCard>
-                            <UserAgeCard>22 Anos</UserAgeCard>
 
-                            <UserQuery>Rotina</UserQuery>
-                    </UserDataCard>
-                </DataUser>
-
-               <ContentHour><DataUser><UserAgeCard>14:00</UserAgeCard></DataUser></ContentHour>
-            </ContainerCard> */}
-
+                <ProfileModal/>
+            {/* modal ver prontuario */}
         </Container>
     )
 }

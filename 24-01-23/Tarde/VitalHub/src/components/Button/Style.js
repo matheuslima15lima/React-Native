@@ -28,3 +28,8 @@ export const BtnQuery = styled(Btn)`
  export const BtnQWhite = styled(BtnQuery)`
     background-color:#FBFBFB;
  `
+
+export const ButtonModal = styled(Btn)`
+    width:80%;
+`
+
