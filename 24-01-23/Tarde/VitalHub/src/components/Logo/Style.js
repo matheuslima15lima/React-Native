@@ -8,7 +8,7 @@ export const Logo = styled.Image`
 export const ProfileImg = styled.ImageBackground`
     height:280;
     width:100%;
-    margin-bottom:60px;
+    margin-bottom:20px;
 `
 
 export const ImageUser = styled.ImageBackground`

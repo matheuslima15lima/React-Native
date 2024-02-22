@@ -31,6 +31,7 @@ background-color:white;
 align-items:center;
 justify-content:center;
 text-align:center;
+margin-bottom: 30px;
 
 shadow-color:'black';
     shadow-opacity:0.26;

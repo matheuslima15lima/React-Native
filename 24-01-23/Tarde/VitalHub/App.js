@@ -17,6 +17,7 @@ import { CreateAcnt } from './src/screens/CreateAcnt/CreateAcnt';
 import { Profile } from './src/screens/Profile/Profile';
 import { MedicalRecord } from './src/screens/MedRecord/MedRecord';
 import { Home } from './src/screens/Home/Home';
+import { HomePacient } from './src/screens/HomePacient/HomePacient';
 
 
 const Stack = createNativeStackNavigator();
@@ -94,6 +95,11 @@ if (!fontsLoaded && !fontError) {
                 name="Pagina Home"
                 component={Home}
                 options={{title:"Pagina Home"}}
+            />
+            <Stack.Screen
+                name="Pagina do paciente"
+                component={HomePacient}
+                options={{title:"Pagina do paciente"}}
             />
           </Stack.Navigator>
         </NavigationContainer>

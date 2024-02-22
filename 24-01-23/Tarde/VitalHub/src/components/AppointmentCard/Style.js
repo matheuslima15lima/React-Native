@@ -31,6 +31,17 @@ export const ViewRow = styled.View`
     justify-content:space-between;
 `
 
+export const ViewRow2 = styled(ViewRow)`
+    gap:16px;
+    width:80%;
+`
+export const ViewRowRec = styled(ViewRow)`
+    gap:20px;
+    width:60%;
+    margin-top:10px;
+    margin-bottom:24px;
+`
+
 
 export const ContentHour = styled.View`
     /* width:100px;

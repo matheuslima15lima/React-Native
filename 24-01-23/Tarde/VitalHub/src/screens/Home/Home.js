@@ -27,6 +27,8 @@ export const Home = () => {
 
     const [showModalCancel, setShowModalCancel] = useState(false);
 
+    const [showModalPro, setShowModalPro] = useState(false);
+
     const [showModalAppointment,setShowModalAppointment] = useState(false);
     return (
 
@@ -83,6 +85,7 @@ export const Home = () => {
                         situacao={item.situacao}
                         onPressCancel={()=>setShowModalCancel(true)}
                         onPressAppoiment={()=> setShowModalAppointment(true)}
+                        onPressShowPro={()=> setShowModalPro(true)}
                         />
                     )
                 }
@@ -95,7 +98,10 @@ export const Home = () => {
                     setShowModalCancel={setShowModalCancel}
                 />
 
-                <ProfileModal/>
+                <ProfileModal
+                    visible={showModalPro}
+                    setShowModalPro={setShowModalPro}
+                />
             {/* modal ver prontuario */}
         </Container>
     )

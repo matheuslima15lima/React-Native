@@ -76,6 +76,11 @@ export const TextDefault = styled.Text`
     margin-bottom: 3px;
 `
 
+export const TextModalEmail = styled(TextDefault)`
+    margin-top: 5px;
+    color:#5F5C6B;
+`
+
 export const NomeUser = styled.Text`
     
     font-family: 'MontserratAlternates_600SemiBold';

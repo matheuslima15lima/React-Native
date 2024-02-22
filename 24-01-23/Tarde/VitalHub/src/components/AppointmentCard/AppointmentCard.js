@@ -6,7 +6,8 @@ import { ButtonCard, ButtonText, ContainerCardList, ContentCard, ContentHour, Vi
 export const AppoimentCard = ({
     situacao = "pendente",
     onPressCancel,
-    onPressAppoiment
+    onPressAppoiment,
+    onPressShowPro,
 }) => {
     return (
         <ContainerCardList>
@@ -43,7 +44,7 @@ export const AppoimentCard = ({
                                 </ButtonCard>
                             ) :
                                 (
-                                    <ButtonCard>
+                                    <ButtonCard onPress={onPressShowPro}>
                                         <ButtonText situacao={situacao}>Ver prontuario</ButtonText>
                                     </ButtonCard>
                                 )

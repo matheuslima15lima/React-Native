@@ -5,7 +5,8 @@ import { Title, TitleBtn } from "../Title/Style"
 import { ContentAccountN } from "../ContentAccount/Style"
 import { LinkAccount } from "../Link/Style"
 import { ImageQuery } from "./Style"
-import { UserQuery } from "../Header/Style"
+import { TextDefault, TextModalEmail, UserQuery } from "../Header/Style"
+import { ViewRow, ViewRow2 } from "../AppointmentCard/Style"
 
 export const ProfileModal = ({
     visible,
@@ -30,13 +31,17 @@ export const ProfileModal = ({
                         Nicole Sarga
                     </Title>
 
-                    <UserQuery>22 Anos</UserQuery>
+                    <ViewRow2>
+                        <UserQuery>22 Anos</UserQuery>
+                        <TextModalEmail>niccole.sarga@gmail.com</TextModalEmail>
+                    </ViewRow2>
+
                     <ButtonModal>
-                        <TitleBtn>Inserir Prontuário</TitleBtn>
+                        <TitleBtn>INSERIR PRONTUÁRIO</TitleBtn>
                     </ButtonModal>
 
                     <ContentAccountN>
-                        <LinkAccount >Cancelar</LinkAccount>
+                        <LinkAccount onPress={()=> setShowModalPro(false)}>Cancelar</LinkAccount>
                     </ContentAccountN>
 
                 </ModalContent>
