@@ -2,12 +2,17 @@ import { useState } from "react"
 import { BtnAppoiment } from "../../components/Button/BtnAppoiment"
 import CalendarHome from "../../components/CalendarHome/CalendarHome"
 import { Container } from "../../components/Container/Style"
-import { BoxUser, DataUser, FilterAppoinment, HeaderContainer, NomeUser, TextDefault } from "../../components/Header/Style"
-import { ImageBell, ImageUser } from "../../components/Logo/Style"
+import { BoxUser, DataUser, FilterAppoinment, HeaderContainer, IconContainer, NomeUser, TextDefault } from "../../components/Header/Style"
+import {  ImageUser } from "../../components/Logo/Style"
 import { ListComponent } from "../../components/List/List"
 import { CancelationModal } from "../../components/CancelationModal/CancelationModal"
 import { ProfileModal } from "../../components/ProfileModal/ProfileModal"
 import { AppoimentCard } from "../../components/AppointmentCard/AppointmentCard"
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { ButtonSchedule } from "./Style"
+import { FontAwesome6 } from '@expo/vector-icons';
+import { CardDoc } from "../../components/AppointmentCard/CardDoc"
+import { ScheduleModal } from "../../components/ScheduleModal/ScheduleModal"
 
 
 
@@ -34,22 +39,19 @@ export const HomePacient = ()=>{
         <HeaderContainer>
             <BoxUser>
                 <ImageUser
-                    source={require('../../../src/assets/images/Medico.png')}
+                    source={require('../../../src/assets/images/RichardKosta.png')}
                 />
 
                 <DataUser>
                     <TextDefault>Bem-Vindo</TextDefault>
-                    <NomeUser>Dr.Claudio</NomeUser>
+                    <NomeUser>Richard Kosta</NomeUser>
                 </DataUser>
             </BoxUser>
 
-            <DataUser>
-                <ImageBell
-                    source={require('../../../src/assets/images/Group-94.png')}
-                />
+            <IconContainer>
+            <MaterialCommunityIcons name="bell" size={24} color="white"/>
 
-
-            </DataUser>
+            </IconContainer>
 
         </HeaderContainer>
 
@@ -79,7 +81,7 @@ export const HomePacient = ()=>{
 
             renderItem={({ item }) =>
                 statusLista == item.situacao && (
-                    <AppoimentCard
+                    <CardDoc
                     situacao={item.situacao}
                     onPressCancel={()=>setShowModalCancel(true)}
                     onPressAppoiment={()=> setShowModalAppointment(true)}
@@ -100,6 +102,12 @@ export const HomePacient = ()=>{
                 visible={showModalPro}
                 setShowModalPro={setShowModalPro}
             /> 
+
+            <ButtonSchedule>
+            <FontAwesome6 name="stethoscope" size={26} color="white" />
+            </ButtonSchedule>
+
+            <ScheduleModal></ScheduleModal>
         {/* modal ver prontuario */}
     </Container>
 

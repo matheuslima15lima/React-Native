@@ -3,14 +3,15 @@ import { useState } from "react"
 import { BtnQWhite, BtnQuery } from "../../components/Button/Style"
 import CalendarHome from "../../components/CalendarHome/CalendarHome"
 import { Container } from "../../components/Container/Style"
-import { BoxUser, ContainerCard, DataUser, FilterAppoinment, HeaderContainer, NomeUser, NomeUserBlack, TextDefault, UserAgeCard, UserDataCard, UserNameCard, UserQuery } from "../../components/Header/Style"
-import { ImageBell, ImagePacient, ImageUser } from "../../components/Logo/Style"
+import { BoxUser, ContainerCard, DataUser, FilterAppoinment, HeaderContainer, IconContainer, NomeUser, NomeUserBlack, TextDefault, UserAgeCard, UserDataCard, UserNameCard, UserQuery } from "../../components/Header/Style"
+import { ImagePacient, ImageUser } from "../../components/Logo/Style"
 import { TitleQuery, TitleQuery2 } from "../../components/Title/Style"
 import { BtnAppoiment } from "../../components/Button/BtnAppoiment"
 import { ListComponent } from "../../components/List/List"
 import { AppoimentCard } from "../../components/AppointmentCard/AppointmentCard"
 import { CancelationModal } from "../../components/CancelationModal/CancelationModal"
 import { ProfileModal } from "../../components/ProfileModal/ProfileModal"
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Consultas = [
     { id: 1, nome: "Carlos", situacao: "pendente" },
@@ -29,7 +30,7 @@ export const Home = () => {
 
     const [showModalPro, setShowModalPro] = useState(false);
 
-    const [showModalAppointment,setShowModalAppointment] = useState(false);
+    const [showModalAppointment, setShowModalAppointment] = useState(false);
     return (
 
         <Container>
@@ -45,13 +46,11 @@ export const Home = () => {
                     </DataUser>
                 </BoxUser>
 
-                <DataUser>
-                    <ImageBell
-                        source={require('../../../src/assets/images/Group-94.png')}
-                    />
+                <IconContainer>
 
+                    <MaterialCommunityIcons name="bell" size={24} color="white" />
 
-                </DataUser>
+                </IconContainer>
 
             </HeaderContainer>
 
@@ -81,27 +80,27 @@ export const Home = () => {
 
                 renderItem={({ item }) =>
                     statusLista == item.situacao && (
-                        <AppoimentCard 
-                        situacao={item.situacao}
-                        onPressCancel={()=>setShowModalCancel(true)}
-                        onPressAppoiment={()=> setShowModalAppointment(true)}
-                        onPressShowPro={()=> setShowModalPro(true)}
+                        <AppoimentCard
+                            situacao={item.situacao}
+                            onPressCancel={() => setShowModalCancel(true)}
+                            onPressAppoiment={() => setShowModalAppointment(true)}
+                            onPressShowPro={() => setShowModalPro(true)}
                         />
                     )
                 }
-                    showsVerticalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
 
             />
             {/* modal cancelar */}
-                <CancelationModal
-                    visible={showModalCancel}
-                    setShowModalCancel={setShowModalCancel}
-                />
+            <CancelationModal
+                visible={showModalCancel}
+                setShowModalCancel={setShowModalCancel}
+            />
 
-                <ProfileModal
-                    visible={showModalPro}
-                    setShowModalPro={setShowModalPro}
-                />
+            <ProfileModal
+                visible={showModalPro}
+                setShowModalPro={setShowModalPro}
+            />
             {/* modal ver prontuario */}
         </Container>
     )

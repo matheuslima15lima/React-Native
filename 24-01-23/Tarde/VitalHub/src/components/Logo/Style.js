@@ -24,7 +24,3 @@ export const ImagePacient = styled.Image`
    
 `
 
-export const ImageBell = styled.ImageBackground`
-    height: 25px;
-    width:25px;
-`

@@ -43,14 +43,19 @@ export const Subtitle = styled.Text`
     width:90%;
     font-size: 16px;
     margin-top: 15px;
-    text-align:center
+    text-align:center;
 `
+
+
 
 export const Label = styled.Text`
     font-family: 'Quicksand_600SemiBold';
     font-size:16px;
 `
 
+export const LabelModal = styled(Label)`
+    font-size:14px;
+`
 export const TextProfile = styled(TextAccount)`
     color:#33303E;
 `

@@ -24,6 +24,8 @@ export const BoxUser = styled.View`
     align-items:center;
     column-gap:10px;
     margin-bottom:30px;
+    margin-left: 20px;
+    margin-top: 34px;
     /* margin-left: 20px; */
 `
 
@@ -49,6 +51,9 @@ export const ContainerCard = styled.View`
 export const DataUser = styled.View`
     
     gap:6px;
+`
+export const IconContainer = styled.View`
+        margin-right:22px;
 `
 
 export const UserDataCard = styled.View`
