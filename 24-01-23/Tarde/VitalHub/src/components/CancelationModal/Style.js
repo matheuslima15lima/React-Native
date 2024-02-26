@@ -14,7 +14,9 @@ export const ModalContent = styled.View`
     background-color:#fff;
     align-items:center;
 `
-
+export const ModalContentQuery = styled(ModalContent)`
+    width:100%;
+`
 export const ModalText = styled.Text`
     width:270px;
     font-size:16px;

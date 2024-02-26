@@ -1,9 +1,11 @@
 import { Modal } from "react-native"
 import { Container } from "../Container/Style"
 import { LabelModal, Title } from "../Title/Style"
-import { ModalContent, PacientModal } from "../CancelationModal/Style"
+import { ModalContent, ModalContentQuery, PacientModal } from "../CancelationModal/Style"
 import { BoxInput } from "../BoxInput/Style"
 import { Input } from "../Input/Style"
+import { ButtonTypeQuery, ContainerButtonQuery, TextButtonQuery } from "./Style"
+import { FilterAppoinment } from "../Header/Style"
 
 
 export const ScheduleModal = ({
@@ -20,17 +22,20 @@ export const ScheduleModal = ({
         >
 
             <PacientModal>
-                <ModalContent>
+                <ModalContentQuery>
                     <Title>Agendar consulta</Title>
 
                     <BoxInput>
                         <LabelModal>Qual o nível da consulta</LabelModal>
-                        <Input
-                            placeholder='Informe a localização'
-                        />
                     </BoxInput>
+                    <ContainerButtonQuery>
+                        <ButtonTypeQuery><TextButtonQuery>Rotina</TextButtonQuery></ButtonTypeQuery>
 
-                </ModalContent>
+                        <ButtonTypeQuery><TextButtonQuery>Exame</TextButtonQuery></ButtonTypeQuery>
+                        <ButtonTypeQuery><TextButtonQuery>Urgência</TextButtonQuery></ButtonTypeQuery>
+                    </ContainerButtonQuery>
+
+                </ModalContentQuery>
             </PacientModal>
         </Modal>
 
