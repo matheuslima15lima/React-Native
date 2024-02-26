@@ -32,7 +32,7 @@ export const MedicalRecord = () => {
 
                 <ViewRowRec>
                     <UserQuery>22 Anos</UserQuery>
-                    <TextModalEmail>niccole.sarga@gmail.com</TextModalEmail>
+                    <TextModalEmail>richard.kosta@gmail.com</TextModalEmail>
                 </ViewRowRec>
 
 

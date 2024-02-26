@@ -12,6 +12,10 @@ export const Btn = styled.TouchableOpacity`
     /* padding:12px 8px 12px 8px; */
 `
 
+export const BtnModal= styled(Btn)`
+    margin-top: 143px;
+`
+
 export const GoogleBtn = styled(Btn)`
     background-color: #ffff;
     border: 2px solid #496BBA;

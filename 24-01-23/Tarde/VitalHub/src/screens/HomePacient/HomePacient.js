@@ -33,6 +33,8 @@ export const HomePacient = ()=>{
 
     const [showModalPro, setShowModalPro] = useState(false);
 
+    const [showScheduleModal,setShowScheduleModal] = useState(false);
+
     const [showModalAppointment,setShowModalAppointment] = useState(false);
     return(
         <Container>
@@ -86,6 +88,7 @@ export const HomePacient = ()=>{
                     onPressCancel={()=>setShowModalCancel(true)}
                     onPressAppoiment={()=> setShowModalAppointment(true)}
                     onPressShowPro={()=>setShowModalPro(true)}
+                   
                     />
                 )
             }
@@ -103,11 +106,16 @@ export const HomePacient = ()=>{
                 setShowModalPro={setShowModalPro}
             /> 
 
-            <ButtonSchedule>
+            <ButtonSchedule
+                     onPress={()=>setShowScheduleModal(true)}
+            >
             <FontAwesome6 name="stethoscope" size={26} color="white" />
             </ButtonSchedule>
 
-            <ScheduleModal></ScheduleModal>
+            <ScheduleModal
+                visible={showScheduleModal}
+                setShowScheduleModal={setShowScheduleModal}
+            />
         {/* modal ver prontuario */}
     </Container>
 

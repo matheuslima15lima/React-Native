@@ -6,7 +6,7 @@ export const Title = styled.Text`
     color:#33303e;
     
 
-    /* margin-top:25px; */
+    margin-bottom:${props=`${props.margin}px`}
 `
 export const TitleBtn = styled.Text`
     font-family: 'MontserratAlternates_700Bold';

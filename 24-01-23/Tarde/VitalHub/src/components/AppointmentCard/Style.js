@@ -1,10 +1,11 @@
 import styled from "styled-components"
 
 export const ContainerCardList = styled.View`
-    width:90%;
+    /* width:90%; */
+    width:${props => `${props.fieldWidth}%`};
     margin: 0px auto;
     margin-bottom: 12px;
-    padding:10px;
+    padding:${props => `${props.fieldPadding}px`};
     border-radius:5px;
     background-color:#fff;
     flex-direction:row;
@@ -19,8 +20,10 @@ export const ContainerCardList = styled.View`
 
 export const ContentCard = styled.View`
     width:70%;
-    gap:11px;
+    gap:${props=> `${props.gaps}px`};
     background-color: #fff;
+    flex-direction:${props=> `${props.direction}`};
+    
     
 `
 

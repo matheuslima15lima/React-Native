@@ -8,14 +8,22 @@ export const AppoimentCard = ({
     onPressCancel,
     onPressAppoiment,
     onPressShowPro,
+    fieldWidth=90,
+    fieldPadding=10,
+    gaps=10,
 }) => {
     return (
-        <ContainerCardList>
+        <ContainerCardList 
+        fieldPadding={fieldPadding}
+        fieldWidth={fieldWidth}
+        >
             <ImagePacient
                 source={require('../../../src/assets/images/Rectangle 414.png')}
             />
 
-            <ContentCard>
+            <ContentCard
+                gaps={gaps}
+            >
                 <DataUser>
 
                     <NomeUserBlack>Nicole Sarga</NomeUserBlack>

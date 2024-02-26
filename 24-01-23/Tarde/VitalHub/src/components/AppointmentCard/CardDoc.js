@@ -8,14 +8,22 @@ export const CardDoc = ({
     onPressCancel,
     onPressAppoiment,
     onPressShowPro,
+    onPressSchedule,
+    fieldWidth = 90,
+    fieldPadding = 10,
+    gaps=10
 }) => {
     return (
-        <ContainerCardList>
+        <ContainerCardList
+            fieldPadding={fieldPadding}
+            fieldWidth={fieldWidth}>
             <ImagePacient
                 source={require('../../../src/assets/images/Dr.png')}
             />
 
-            <ContentCard>
+            <ContentCard
+                gaps={gaps}
+            >
                 <DataUser>
 
                     <NomeUserBlack>Dr. Claudio</NomeUserBlack>
