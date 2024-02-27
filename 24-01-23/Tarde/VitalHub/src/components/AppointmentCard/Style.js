@@ -15,23 +15,27 @@ export const ContainerCardList = styled.View`
     shadow-offset:20px 20px;
     shadow-radius:10px;
     elevation:5;
-
-`
+    
+    `
 
 export const ContentCard = styled.View`
     width:70%;
-    gap:${props=> `${props.gaps}px`};
     background-color: #fff;
     flex-direction:${props=> `${props.direction}`};
+    gap:${props=> `${props.gaps}px`};
+
+    padding-bottom:${props=>`${props.PaddingB}px`};
+    padding-top:${props=>`${props.PaddingT}`}
     
-    
-`
+    `
 
 export const ViewRow = styled.View`
     width:100%;
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
+
+    margin-left:${props=>`${props.MarginL}px`};
 `
 
 export const ViewRow2 = styled(ViewRow)`
@@ -47,8 +51,8 @@ export const ViewRowRec = styled(ViewRow)`
 
 
 export const ContentHour = styled.View`
-    /* width:100px;
-    height:26px; */
+    width:100px;
+    height:26px;
     
     border-radius: 5px;
     padding:4px 23px;

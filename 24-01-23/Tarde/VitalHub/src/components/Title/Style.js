@@ -6,7 +6,7 @@ export const Title = styled.Text`
     color:#33303e;
     
 
-    margin-bottom:${props=`${props.margin}px`}
+   margin-bottom:${props => `${props.margin}px`};
 `
 export const TitleBtn = styled.Text`
     font-family: 'MontserratAlternates_700Bold';
@@ -29,7 +29,7 @@ export const TitleGoogle = styled(TitleBtn)`
 `
 
 export const TextAccount = styled.Text`
-        font-family: 'MontserratAlternates_500Medium';
+    font-family: 'MontserratAlternates_500Medium';
     font-size:14px;
     color:#8C8A97;
     align-self: flex-start;
@@ -59,7 +59,7 @@ export const LabelModal = styled(Label)`
 export const TextProfile = styled(TextAccount)`
     color:#33303E;
 `
-export const TitleHome  = styled(Title)`
+export const TitleHome = styled(Title)`
     color:#4E4B59;
     align-self:flex-start;
     margin-left: 22px;
