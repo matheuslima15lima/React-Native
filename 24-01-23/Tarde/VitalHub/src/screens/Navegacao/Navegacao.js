@@ -48,6 +48,10 @@ export const Navegacao = ({navigation})=>{
                     title="Selecionar Medico" 
                     onPress={()=> navigation.navigate("Selecionar Medico")}    
             />
+            <Button
+                    title="Selecionar Data" 
+                    onPress={()=> navigation.navigate("Selecionar Data")}    
+            />
         </View>
     )
 }

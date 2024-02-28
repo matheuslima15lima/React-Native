@@ -4,6 +4,8 @@ import { AntDesign } from '@expo/vector-icons';
 import { TextAssessment, ViewCardClinic, ViewRowStar } from "./Style";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+
+
 export const CardClinic = (
     {
 

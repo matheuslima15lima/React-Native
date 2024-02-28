@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
-export const ContainerCardList = styled.View`
+export const ContainerCardList = styled.TouchableOpacity`
     /* width:90%; */
     width:${props => `${props.fieldWidth}%`};
     margin: 0px auto;
@@ -15,7 +15,7 @@ export const ContainerCardList = styled.View`
     shadow-offset:20px 20px;
     shadow-radius:10px;
     elevation:5;
-    
+    ${props=> props.clickButton ? css`border:2px solid #496BBA` : css`border:transparent`};
     `
 
 export const ContentCard = styled.View`
