@@ -12,6 +12,7 @@ export const ViewCardClinic = styled.View`
 export const ViewRowStar = styled.View`
         flex-direction:row;
         margin-left: 20px;
+        padding-right: ${props=>`${props.MarginR}px`};
 `
 
 export const TextAssessment = styled.Text`

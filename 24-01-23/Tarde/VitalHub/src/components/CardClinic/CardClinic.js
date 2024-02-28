@@ -6,15 +6,16 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export const CardClinic = (
     {
+
         fieldWidth = 90,
         fieldPadding = 5,
         direction = 'row',
         gaps = 100,
-        MarginL = 10,
+        MarginL = 0,
         situacao = 'pendente',
-        PaddingB=10,
-        
-        Nome,
+        PaddingB = 10,
+        MarginR = 20,
+        nome,
     }
 ) => {
     return (
@@ -31,15 +32,17 @@ export const CardClinic = (
                 direction={direction}
 
             >
-                <DataUser>
-                    <NomeUserBlack>{Nome}</NomeUserBlack>
+                <DataUser
+                    MarginL={MarginL}
+                >
+                    <NomeUserBlack>{nome}</NomeUserBlack>
                     <UserQuery>São Paulo, SP</UserQuery>
                 </DataUser>
                 <ViewCardClinic
 
                 >
                     <ViewRowStar
-                        MarginL={MarginL}
+                        MarginR={MarginR}
                     >
                         <AntDesign name="star" size={24} color="#F9A620" />
                         <TextAssessment>4,5</TextAssessment>
@@ -49,8 +52,8 @@ export const CardClinic = (
                     <ContentHour situacao={situacao}>
                         <MaterialCommunityIcons name="calendar-outline" size={18} color="#49B3BA" />
                         <UserQuery
-                         situacao={situacao}
-                         >Seg-Sex</UserQuery>
+                            situacao={situacao}
+                        >Seg-Sex</UserQuery>
                     </ContentHour>
 
 

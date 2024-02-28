@@ -1,8 +1,28 @@
+import { useState } from "react"
 import { CardClinic } from "../../components/CardClinic/CardClinic"
 import { Container } from "../../components/Container/Style"
-import { Title } from "../../components/Title/Style"
+import { Title, TitleBtn } from "../../components/Title/Style"
+import { ListComponent } from "../../components/List/List"
+import { ContentAccountN } from "../../components/ContentAccount/Style"
 
-
+const clinicas = [
+    {
+        id: 0,
+        nome: 'Clínica Natureh'
+    },
+    {
+        id: 1,
+        nome: 'Clinic'
+    },
+    {
+        id: 2,
+        nome: 'Clinic'
+    },
+    {
+        id: 3,
+        nome: 'Clinic'
+    }
+]
 export const SelectClinic = (
     
     {
@@ -14,26 +34,33 @@ export const SelectClinic = (
     
     
     )=>{
-    const clinicas = [
-        {
-            id: 0,
-            nome: 'Clinic'
-        }
-    ]
+ 
+
+    const [statusLista, setStatusLista] = useState("bla");
         
     return(
         <Container>
             <Title margin={margin}>Selecionar clínica</Title>
 
-            <CardClinic 
-                Nome={clinicas[0].nome}
+            <ListComponent
+                data={clinicas}
+                keyExtractor={(item) => item.id}
+
+                renderItem={({ item }) =>
+                     (
+                        <CardClinic
+                            nome={item.nome}
+                           
+                        />
+                    )
+                }
+                showsVerticalScrollIndicator={false}
+
             />
-            <CardClinic />
-            <CardClinic />
-            <CardClinic />
-            <CardClinic />
-            <CardClinic />
-            <CardClinic />
+
+            <Btn><TitleBtn>CONTINUAR</TitleBtn></Btn>
+
+            <ContentAccountN><LinkAccount>Cancelar</LinkAccount></ContentAccountN>
         </Container>
 
        
