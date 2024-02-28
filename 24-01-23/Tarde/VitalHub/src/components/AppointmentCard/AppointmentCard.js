@@ -11,6 +11,7 @@ export const AppoimentCard = ({
     fieldWidth=90,
     fieldPadding=10,
     gaps=10,
+    MarginL=-70,
 }) => {
     return (
         <ContainerCardList 
@@ -34,7 +35,9 @@ export const AppoimentCard = ({
                     </UserDataCard>
                 </DataUser>
 
-                <ViewRow>
+                <ViewRow
+                    
+                >
                     <ContentHour situacao={situacao}>
                         <AntDesign name="clockcircle" size={24} color={situacao == "pendente" ? "#49B3BA" : "#8C8A97"} />
 

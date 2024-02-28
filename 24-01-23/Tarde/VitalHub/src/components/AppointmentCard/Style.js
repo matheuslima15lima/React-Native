@@ -19,13 +19,16 @@ export const ContainerCardList = styled.View`
     `
 
 export const ContentCard = styled.View`
-    width:70%;
+    width:100%;
+    justify-content: space-between;
+    padding: 15px;
+
     background-color: #fff;
     flex-direction:${props=> `${props.direction}`};
-    gap:${props=> `${props.gaps}px`};
+    /* gap:${props=> `${props.gaps}px`}; */
 
     padding-bottom:${props=>`${props.PaddingB}px`};
-    padding-top:${props=>`${props.PaddingT}`}
+    padding-top:${props=>`${props.PaddingT}`};
     
     `
 
@@ -36,6 +39,7 @@ export const ViewRow = styled.View`
     justify-content:space-between;
 
     margin-left:${props=>`${props.MarginL}px`};
+    
 `
 
 export const ViewRow2 = styled(ViewRow)`
@@ -59,7 +63,9 @@ export const ContentHour = styled.View`
     flex-direction:row;
     gap:6px;
     background-color: ${(props)=> props.situacao == "pendente" ? "#E8FCFD" :"#F1F0F5"};
-   
+   height:${props=>`${props.H}px`};
+   width:${props=>`${props.W}px`};
+   align-items:${props=>`${props.Align}`};
 
 `
 

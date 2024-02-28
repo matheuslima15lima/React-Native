@@ -10,12 +10,15 @@ export const CardClinic = (
         fieldWidth = 90,
         fieldPadding = 5,
         direction = 'row',
-        gaps = 100,
+        // gaps = 100,
         MarginL = 0,
         situacao = 'pendente',
         PaddingB = 10,
-        MarginR = 20,
+        PadR = 20,
         nome,
+        H=40,
+        W=120,
+        Align='center',
     }
 ) => {
     return (
@@ -28,7 +31,7 @@ export const CardClinic = (
             <ContentCard
                 PaddingB={PaddingB}
                 PaddingT={PaddingB}
-                gaps={gaps}
+                // gaps={gaps}
                 direction={direction}
 
             >
@@ -41,15 +44,17 @@ export const CardClinic = (
                 <ViewCardClinic
 
                 >
-                    <ViewRowStar
-                        MarginR={MarginR}
-                    >
+                    <ViewRowStar>
                         <AntDesign name="star" size={24} color="#F9A620" />
                         <TextAssessment>4,5</TextAssessment>
                     </ViewRowStar>
 
 
-                    <ContentHour situacao={situacao}>
+                    <ContentHour 
+                        H={H}
+                        W={W}
+                        Align={Align}
+                    situacao={situacao}>
                         <MaterialCommunityIcons name="calendar-outline" size={18} color="#49B3BA" />
                         <UserQuery
                             situacao={situacao}

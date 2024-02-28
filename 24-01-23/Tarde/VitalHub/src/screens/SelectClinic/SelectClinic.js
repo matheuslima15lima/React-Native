@@ -4,6 +4,8 @@ import { Container } from "../../components/Container/Style"
 import { Title, TitleBtn } from "../../components/Title/Style"
 import { ListComponent } from "../../components/List/List"
 import { ContentAccountN } from "../../components/ContentAccount/Style"
+import { Btn } from "../../components/Button/Style"
+import { LinkAccount } from "../../components/Link/Style"
 
 const clinicas = [
     {

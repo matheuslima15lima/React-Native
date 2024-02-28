@@ -19,6 +19,7 @@ import { MedicalRecord } from './src/screens/MedRecord/MedRecord';
 import { Home } from './src/screens/Home/Home';
 import { HomePacient } from './src/screens/HomePacient/HomePacient';
 import { SelectClinic } from './src/screens/SelectClinic/SelectClinic';
+import { SelectDoctor } from './src/screens/SelectDoctor/SelectDoctor';
 
 
 const Stack = createNativeStackNavigator();
@@ -106,6 +107,11 @@ if (!fontsLoaded && !fontError) {
                 name="Selecionar Clinica"
                 component={SelectClinic}
                 options={{title:"Selecionar Clinica"}}
+            />
+            <Stack.Screen
+                name="Selecionar Medico"
+                component={SelectDoctor}
+                options={{title:"Selecionar Medico"}}
             />
           </Stack.Navigator>
         </NavigationContainer>

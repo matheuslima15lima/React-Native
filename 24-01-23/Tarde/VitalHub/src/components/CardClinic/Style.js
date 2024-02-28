@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ViewCardClinic = styled.View`
        
+       width:40%;
 
         gap:10px;
 
@@ -12,7 +13,7 @@ export const ViewCardClinic = styled.View`
 export const ViewRowStar = styled.View`
         flex-direction:row;
         margin-left: 20px;
-        padding-right: ${props=>`${props.MarginR}px`};
+        padding-right: ${props=>`${props.PadR}px`};
 `
 
 export const TextAssessment = styled.Text`
