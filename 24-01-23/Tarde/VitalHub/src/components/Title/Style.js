@@ -44,6 +44,8 @@ export const Subtitle = styled.Text`
     font-size: 16px;
     margin-top: 15px;
     text-align:center;
+    align-self:${props=>`${props.align}`};
+    margin-left: -47px;
 `
 
 

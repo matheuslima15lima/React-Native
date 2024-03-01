@@ -21,6 +21,7 @@ const Medicos = [
 export const SelectDoctor = () => {
 
     const [selectMedico, setSelectMedico] = useState(0);
+    const [showModalQuery, setShowModalQuery]= useState(false);
     return (
         <Container>
             <Title>Selecionar Médico</Title>
@@ -41,6 +42,8 @@ export const SelectDoctor = () => {
             <Btn><TitleBtn>CONTINUAR</TitleBtn></Btn>
 
             <ContentAccountN><LinkAccount>Cancelar</LinkAccount></ContentAccountN>
+
+          
 
         </Container>
     )

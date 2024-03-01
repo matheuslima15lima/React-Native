@@ -41,7 +41,8 @@ export const ProfileModal = ({
                     </ButtonModal>
 
                     <ContentAccountN>
-                        <LinkAccount onPress={()=> setShowModalPro(false)}>Cancelar</LinkAccount>
+                        <LinkAccount 
+        onPress={()=> setShowModalPro(false)}>Cancelar</LinkAccount>
                     </ContentAccountN>
 
                 </ModalContent>

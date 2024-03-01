@@ -43,6 +43,7 @@ export const InputSelect = () => {
           { label: "Java", value: "Java" },
           { label: "C++", value: "C++" },
           { label: "C", value: "C" },
+          { label: "C#", value: "C#" },
         ]}
       />
     </View>

@@ -9,6 +9,8 @@ export const Btn = styled.TouchableOpacity`
     justify-content:center;
     margin-top: 30px;
     height:44px;
+
+    margin-top: ${props=> `${props.Top}px`};
     /* padding:12px 8px 12px 8px; */
 `
 

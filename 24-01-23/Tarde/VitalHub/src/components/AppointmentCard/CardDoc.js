@@ -11,7 +11,8 @@ export const CardDoc = ({
     onPressSchedule,
     fieldWidth = 90,
     fieldPadding = 10,
-    gaps=10
+    gaps=10,
+    MarginL= -10,
 }) => {
     return (
         <ContainerCardList
@@ -34,7 +35,10 @@ export const CardDoc = ({
                     </UserDataCard>
                 </DataUser>
 
-                <ViewRow>
+                <ViewRow
+                
+                    MarginL={MarginL}
+                >
                     <ContentHour situacao={situacao}>
                         <AntDesign name="clockcircle" size={24} color={situacao == "pendente" ? "#49B3BA" : "#8C8A97"} />
 
