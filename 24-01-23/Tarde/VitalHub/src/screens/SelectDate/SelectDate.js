@@ -11,6 +11,7 @@ import { Subtitle, Title, TitleBtn } from "../../components/Title/Style"
 export const SelectDate = ({
     align='baseline',
     Top=10,
+    MbButton= 20,
 }) => {
 
     const [showModalQuery, setShowModalQuery] = useState(false);
@@ -25,9 +26,13 @@ export const SelectDate = ({
                 >Selecione um valor</Subtitle>
             
 
-            <InputSelect />
+            <InputSelect
+                
+            />
 
             <Btn
+
+                MbButton={MbButton}
                 onPress={()=> setShowModalQuery(true)}
                 Top={Top}
             >

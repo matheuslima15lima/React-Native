@@ -11,6 +11,8 @@ export const Btn = styled.TouchableOpacity`
     height:44px;
 
     margin-top: ${props=> `${props.Top}px`};
+
+    margin-bottom:${props=> `${props.MbButton}px`};
     /* padding:12px 8px 12px 8px; */
 `
 

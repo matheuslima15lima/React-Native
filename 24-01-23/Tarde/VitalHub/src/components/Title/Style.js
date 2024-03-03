@@ -7,6 +7,8 @@ export const Title = styled.Text`
     
 
    margin-bottom:${props => `${props.margin}px`};
+
+   margin-top:${props=> `${props.marginTop}px`}
 `
 export const TitleBtn = styled.Text`
     font-family: 'MontserratAlternates_700Bold';
@@ -45,7 +47,8 @@ export const Subtitle = styled.Text`
     margin-top: 15px;
     text-align:center;
     align-self:${props=>`${props.align}`};
-    margin-left: -47px;
+    margin-right:${props=>`${props.Mr}px`};
+    margin-bottom:${props=>`${props.Bot}`};
 `
 
 

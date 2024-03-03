@@ -6,6 +6,7 @@ import { BoxInput } from "../components/BoxInput/Style"
 import { Btn } from "../components/Button/Style"
 import { ContentAccountN } from "../components/ContentAccount/Style"
 import { LinkAccount } from "../components/Link/Style"
+import { CenterSubtitle } from "../screens/VerifyEmail/Style"
 
 
 export const QueryModal = ({
@@ -14,6 +15,8 @@ export const QueryModal = ({
     AlignBox = 'baseline',
     MarginB = 30,
     Ml = 40,
+    align='center',
+    Mr=40,
     ...rest
 }) => {
     return (
@@ -35,7 +38,13 @@ export const QueryModal = ({
                     <ContainerScheduleData
                         Ml={Ml}
                     >
-                        <Subtitle>Consulte os dados selecionados para a sua consulta</Subtitle>
+                        
+                            <Subtitle
+                                align={align}
+                                Mr={Mr}
+                            >Consulte os dados selecionados para a sua consulta</Subtitle>
+                        
+
                     </ContainerScheduleData>
 
 

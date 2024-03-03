@@ -21,7 +21,7 @@ export const InputSelect = () => {
   };
 
   return (
-    <View style={{ width: '90%', flex:1 }}>
+    <View style={{ width: '90%', flex:1 ,}}>
 
         
       <RNPickerSelect
@@ -64,7 +64,7 @@ const style = StyleSheet.create({
     fontFamily: 'MontserratAlternates_600SemiBold'
   },
   inputAndroid: {
-    marginBottom: "34%",
+    marginBottom: "30px",
     fontSize: 16,
     padding: 16,
     borderWidth: 2,

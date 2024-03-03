@@ -18,7 +18,7 @@ const Medicos = [
 ]
 
 
-export const SelectDoctor = () => {
+export const SelectDoctor = ({Top=10}) => {
 
     const [selectMedico, setSelectMedico] = useState(0);
     const [showModalQuery, setShowModalQuery]= useState(false);
@@ -38,8 +38,10 @@ export const SelectDoctor = () => {
                 }
             />
 
-
-            <Btn><TitleBtn>CONTINUAR</TitleBtn></Btn>
+            
+            <Btn
+                Top={Top}
+            ><TitleBtn>CONTINUAR</TitleBtn></Btn>
 
             <ContentAccountN><LinkAccount>Cancelar</LinkAccount></ContentAccountN>
 

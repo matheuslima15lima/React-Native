@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { Calendar, LocaleConfig } from "react-native-calendars";
 
-const CalendarComponent = () => {
+export const CalendarComponent = () => {
     
   const [selected, setSelected] = useState("");
 
@@ -71,4 +71,4 @@ const CalendarComponent = () => {
   );
 };
 
-export default CalendarComponent;
+// export default CalendarComponent;

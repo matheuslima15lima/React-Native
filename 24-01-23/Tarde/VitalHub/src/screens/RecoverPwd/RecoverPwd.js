@@ -6,23 +6,30 @@ import { Subtitle, Title, TitleBtn } from "../../components/Title/Style"
 
 
 
-export const RecoverPwd = ()=>{
+export const RecoverPwd = ({Top=20, Bot=20,marginTop=25})=>{
     return(
         <Container>
             <Logo
             source={require('../../../src/assets/images/VitalHub_Logo.png')}
             />
 
-            <Title>Recuperar senha</Title>
+            <Title
+                marginTop={marginTop}
+            >Recuperar senha</Title>
             
-            <Subtitle>Digite abaixo seu email cadastrado que enviaremos um link para recuperação de senha</Subtitle>
+            <Subtitle
+                Bot={Bot}
+            >Digite abaixo seu email cadastrado que enviaremos um link para recuperação de senha</Subtitle>
 
 
             <Input
                 placeholder="Usuário ou E-mail"
             />
 
-            <Btn>
+            <Btn
+                    Top={Top}
+                    
+            >
                 <TitleBtn>CONTINUAR</TitleBtn>
             </Btn>
 
