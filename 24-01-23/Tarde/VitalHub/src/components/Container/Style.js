@@ -8,7 +8,8 @@ export const Container = styled.SafeAreaView`
 export const Scrool = styled.ScrollView`
      height:80%;
     
-     width:100%;
+    
+     
 `
 
 export const ContainerInput = styled.View`

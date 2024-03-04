@@ -32,6 +32,7 @@ export const InputProfile = styled(Input)`
     border-radius:5px;
     margin-top:0px;
     background-color:#F5F3F3;
+    width:${props=> `${props.WidthInput}%`};
     
 `
 export const InputSmaller = styled(InputProfile)`

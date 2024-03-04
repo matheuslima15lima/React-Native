@@ -1,12 +1,12 @@
 import { Modal } from "react-native"
-import { ModalContent, PacientModal } from "../components/CancelationModal/Style"
-import { Label, Subtitle, Title, TitleBtn } from "../components/Title/Style"
+import { ModalContent,PacientModal } from "../CancelationModal/Style"
+import { Label,Subtitle,Title,TitleBtn } from "../Title/Style"
 import { ContainerQueryData, ContainerScheduleData, TextData } from "./Style"
-import { BoxInput } from "../components/BoxInput/Style"
-import { Btn } from "../components/Button/Style"
-import { ContentAccountN } from "../components/ContentAccount/Style"
-import { LinkAccount } from "../components/Link/Style"
-import { CenterSubtitle } from "../screens/VerifyEmail/Style"
+import { BoxInput } from "../../components/BoxInput/Style"
+import { Btn } from "../../components/Button/Style"
+import { ContentAccountN } from "../../components/ContentAccount/Style"
+import { LinkAccount } from "../Link/Style"
+import { CenterSubtitle } from "../../screens/VerifyEmail/Style" 
 
 
 export const QueryModal = ({
@@ -29,6 +29,7 @@ export const QueryModal = ({
 
             <PacientModal>
                 <ModalContent>
+
 
 
                     <Title>

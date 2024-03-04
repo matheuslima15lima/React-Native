@@ -64,6 +64,8 @@ export const LabelModal = styled(Label)`
 `
 export const TextProfile = styled(TextAccount)`
     color:#33303E;
+
+ 
 `
 export const TitleHome = styled(Title)`
     color:#4E4B59;

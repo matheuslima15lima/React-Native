@@ -21,6 +21,8 @@ import { HomePacient } from './src/screens/HomePacient/HomePacient';
 import { SelectClinic } from './src/screens/SelectClinic/SelectClinic';
 import { SelectDoctor } from './src/screens/SelectDoctor/SelectDoctor';
 import { SelectDate } from './src/screens/SelectDate/SelectDate';
+import { SeeLocalQuery } from './src/screens/SeeLocalQuery/SeeLocalQuery';
+import { ViewPrescription } from './src/screens/ViewPrescription/ViewPrescription';
 
 
 
@@ -119,6 +121,16 @@ if (!fontsLoaded && !fontError) {
                 name="Selecionar Data"
                 component={SelectDate}
                 options={{title:"Selecionar Data"}}
+            />
+            <Stack.Screen
+                name="Local da Consulta"
+                component={SeeLocalQuery}
+                options={{title:"Local da Consulta"}}
+            />
+            <Stack.Screen
+                name="Visualizar prescrição"
+                component={ViewPrescription}
+                options={{title:"Visualizar prescrição"}}
             />
           </Stack.Navigator>
         </NavigationContainer>
