@@ -6,7 +6,7 @@ export const Title = styled.Text`
     color:#33303e;
     
 
-   margin-bottom:${props => `${props.margin}px`};
+   margin-bottom:${props => `${props.marginBo}px`};
 
    margin-top:${props=> `${props.marginTop}px`}
 `
@@ -49,6 +49,7 @@ export const Subtitle = styled.Text`
     align-self:${props=>`${props.align}`};
     margin-right:${props=>`${props.Mr}px`};
     margin-bottom:${props=>`${props.Bot}`};
+    
 `
 
 

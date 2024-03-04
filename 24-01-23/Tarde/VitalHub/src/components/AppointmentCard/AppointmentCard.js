@@ -8,22 +8,29 @@ export const AppoimentCard = ({
     onPressCancel,
     onPressAppoiment,
     onPressShowPro,
-    fieldWidth=90,
-    fieldPadding=10,
-    gaps=10,
-    MarginL=-70,
+    fieldWidth = 90,
+    fieldPadding = 10,
+    gaps = 10,
+    MarginR = 70,
+    Align = 'center',
+    MarginL = 50,
+    ContentCardWidth = 70,
+    Justify= 'center',
 }) => {
     return (
-        <ContainerCardList 
-        fieldPadding={fieldPadding}
-        fieldWidth={fieldWidth}
+        <ContainerCardList
+            fieldPadding={fieldPadding}
+            fieldWidth={fieldWidth}
         >
             <ImagePacient
                 source={require('../../../src/assets/images/Rectangle 414.png')}
             />
 
             <ContentCard
+                ContentCardWidth={ContentCardWidth}
                 gaps={gaps}
+
+                Justify={Justify}
             >
                 <DataUser>
 
@@ -36,6 +43,9 @@ export const AppoimentCard = ({
                 </DataUser>
 
                 <ViewRow
+                    Align={Align}
+                    MarginR={MarginR}
+                    MarginL={MarginL}
                     
                 >
                     <ContentHour situacao={situacao}>

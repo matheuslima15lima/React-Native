@@ -23,4 +23,13 @@ export const ImagePacient = styled.Image`
    border-radius:5px;
    
 `
+export const BtnImage = styled.TouchableOpacity`
+    height: 80px;
+    width:77px;
+   border-radius:5px;
+   
+`
+
+
+
 

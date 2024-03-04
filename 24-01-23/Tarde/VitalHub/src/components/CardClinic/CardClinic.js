@@ -21,6 +21,8 @@ export const CardClinic = (
         H=40,
         W=120,
         Align='center',
+        ContentCardWidth=100,
+        Justify= 'space-between',
     }
 ) => {
     return (
@@ -35,7 +37,8 @@ export const CardClinic = (
                 PaddingT={PaddingB}
                 // gaps={gaps}
                 direction={direction}
-
+                ContentCardWidth={ContentCardWidth}
+                Justify={Justify}
             >
                 <DataUser
                     MarginL={MarginL}

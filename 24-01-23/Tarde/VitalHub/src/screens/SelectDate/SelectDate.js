@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { QueryModal } from "../../QueryModal/QueryModal"
 import { Btn } from "../../components/Button/Style"
-import CalendarComponent from "../../components/Calendar/CalendarComponent"
+import {CalendarComponent} from "../../components/Calendar/CalendarComponent"
 import { Container } from "../../components/Container/Style"
 import { ContentAccountN } from "../../components/ContentAccount/Style"
 import { InputSelect } from "../../components/InputSelect/InputSelect"
@@ -9,7 +9,7 @@ import { LinkAccount } from "../../components/Link/Style"
 import { Subtitle, Title, TitleBtn } from "../../components/Title/Style"
 
 export const SelectDate = ({
-    align='baseline',
+    align='flex-start',
     Top=10,
     MbButton= 20,
 }) => {

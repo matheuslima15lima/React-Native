@@ -1,29 +1,45 @@
 import { DataUser, NomeUserBlack, UserAgeCard, UserDataCard, UserQuery } from "../Header/Style"
-import { ImagePacient } from "../Logo/Style"
+import { BtnImage, ImagePacient } from "../Logo/Style"
 import { AntDesign } from '@expo/vector-icons';
 import { TitleBtn } from "../Title/Style";
 import { ButtonCard, ButtonText, ContainerCardList, ContentCard, ContentHour, ViewRow } from "./Style";
 export const CardDoc = ({
     situacao = "pendente",
+    onPressImage,
     onPressCancel,
     onPressAppoiment,
     onPressShowPro,
     onPressSchedule,
     fieldWidth = 90,
     fieldPadding = 10,
-    gaps=10,
-    MarginL= -10,
+    gaps = 10,
+    MarginR = 70,
+    Align = 'center',
+    MarginL = 50,
+    ContentCardWidth = 70,
+    Justify = 'center',
 }) => {
     return (
         <ContainerCardList
             fieldPadding={fieldPadding}
             fieldWidth={fieldWidth}>
-            <ImagePacient
-                source={require('../../../src/assets/images/Dr.png')}
-            />
+            <BtnImage
+                onPress={onPressImage}
+            >
+
+
+                <ImagePacient
+
+                    source={require('../../../src/assets/images/Dr.png')}
+                />
+
+            </BtnImage>
+
 
             <ContentCard
+                ContentCardWidth={ContentCardWidth}
                 gaps={gaps}
+                Justify={Justify}
             >
                 <DataUser>
 
@@ -36,7 +52,8 @@ export const CardDoc = ({
                 </DataUser>
 
                 <ViewRow
-                
+                    Align={Align}
+                    MarginR={MarginR}
                     MarginL={MarginL}
                 >
                     <ContentHour situacao={situacao}>

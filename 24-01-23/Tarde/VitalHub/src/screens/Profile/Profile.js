@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { BoxContainer, BoxInput } from "../../components/BoxInput/Style"
 import { Btn } from "../../components/Button/Style"
 import { Container, ContainerInput, Scrool } from "../../components/Container/Style"
@@ -8,7 +9,9 @@ import { ProfileImg } from "../../components/Logo/Style"
 import { Label, TextAccount, TextProfile, Title, TitleBtn } from "../../components/Title/Style"
 
 
-export const Profile = () => {
+export const Profile = ({MbButton=20}) => {
+
+    
     return (
         <Scrool>
         <Container>
@@ -57,7 +60,9 @@ export const Profile = () => {
                 </BoxContainer>
             </ContainerInput>
 
-            <Btn><TitleBtn>SALVAR</TitleBtn></Btn>
+            <Btn
+                MbButton={MbButton}
+            ><TitleBtn>SALVAR</TitleBtn></Btn>
 
             <Btn><TitleBtn>EDITAR</TitleBtn></Btn>
         </Container>

@@ -19,8 +19,8 @@ export const ContainerCardList = styled.TouchableOpacity`
     `
 
 export const ContentCard = styled.View`
-    width:100%;
-    justify-content: space-between;
+    width:${props=> `${props.ContentCardWidth}%`};
+    justify-content: ${props => `${props.Justify}`};
     padding: 15px;
 
     background-color: #fff;
@@ -29,7 +29,7 @@ export const ContentCard = styled.View`
 
     padding-bottom:${props=>`${props.PaddingB}px`};
     padding-top:${props=>`${props.PaddingT}`};
-    
+    /* border: 2px solid pink; */
     `
 
 export const ViewRow = styled.View`
@@ -37,14 +37,19 @@ export const ViewRow = styled.View`
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-
-    margin-left:${props=>`${props.MarginL}px`};
-    
+    align-self: ${props=> `${props.Align}`};
+    margin-right:${props=>`${props.MarginR}px`};
+    /* border:2px solid blue; */
+    margin-left:${props=> `${props.MarginL}px`};
 `
 
 export const ViewRow2 = styled(ViewRow)`
-    gap:16px;
+    gap:3px;
     width:80%;
+    align-items:${props=> `${props.AlignView}`};
+    justify-content:${props=> `${props.Justify}`};
+
+    /* border:2px solid red; */
 `
 export const ViewRowRec = styled(ViewRow)`
     gap:20px;
@@ -70,12 +75,13 @@ export const ContentHour = styled.View`
 `
 
 export const ButtonCard = styled.TouchableOpacity`
-
+        /* border:2px solid red; */
 `
 
 export const ButtonText= styled.Text`
     font-size:12px;
     font-family :'MontserratAlternates_500Medium';
     color: ${(props) => props.situacao== 'pendente' ? '#C81D25' : '#344F8F'};
+    
 `
 

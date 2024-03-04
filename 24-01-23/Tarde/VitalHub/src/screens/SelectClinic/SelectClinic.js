@@ -28,9 +28,9 @@ const clinicas = [
 export const SelectClinic = (
     
     {
-        margin=35,
+        marginBo=20,
     
-    
+        marginTop=10,
     
     }
     
@@ -42,7 +42,9 @@ export const SelectClinic = (
         
     return(
         <Container>
-            <Title margin={margin}>Selecionar clínica</Title>
+            <Title marginBo={marginBo}
+                marginTop={marginTop}
+            >Selecionar clínica</Title>
 
             <ListComponent
                 data={clinicas}

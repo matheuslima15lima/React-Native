@@ -72,7 +72,7 @@ export const UserQuery = styled.Text`
     font-size: 14px;
     font-family:'Quicksand_600SemiBold';
     color:${(props) => props.situacao == 'pendente'? '#49B3BA': '#8C8A97'};
-    /* padding: ${props=> `${props.Pad}px`}; */
+    margin-right: ${props=> `${props.marginR}px`};
     
 `
 export const TextDefault = styled.Text`
