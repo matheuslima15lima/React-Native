@@ -7,65 +7,68 @@ import { InputProfile, InputSmaller } from "../../components/Input/Style"
 import { LinkProfile } from "../../components/Link/Style"
 import { ProfileImg } from "../../components/Logo/Style"
 import { Label, TextAccount, TextProfile, Title, TitleBtn } from "../../components/Title/Style"
+import { Text } from "react-native"
 
 
-export const Profile = ({MbButton=20}) => {
+export const Profile = ({ MbButton = 20 }) => {
 
-    
+
     return (
-        <Scrool>
-        <Container>
-            <ProfileImg
-            source={require('../../../src/assets/images/Profile.png')}>
-                
+        // <Scrool>
+        //     <Container>
+        //         <ProfileImg
+        //             source={require('../../../src/assets/images/Profile.png')}>
 
-                <ContentProfille>
-                    <Title>Richard Kosta</Title>
-                    <ContentAccountCenter><LinkProfile>richard.kosta@gmail.com</LinkProfile></ContentAccountCenter>
-                    
-                </ContentProfille>
 
-               
+        //             <ContentProfille>
+        //                 <Title>Richard Kosta</Title>
+        //                 <ContentAccountCenter><LinkProfile>richard.kosta@gmail.com</LinkProfile></ContentAccountCenter>
 
-            </ProfileImg>
+        //             </ContentProfille>
 
-            <BoxInput>
-                    <Label>Data de nascimento:</Label>
-                    <InputProfile><TextProfile>04/05/1999</TextProfile></InputProfile>
-            </BoxInput>
 
-            <BoxInput>
-                    <Label>CPF</Label>
-                    <InputProfile><TextProfile>859********</TextProfile></InputProfile>
-            </BoxInput>
 
-            <BoxInput>
-                    <Label>Endereço</Label>
-                    <InputProfile><TextProfile>Rua Vicenso Silva, 987</TextProfile></InputProfile>
-            </BoxInput>
+        //         </ProfileImg>
 
-            <ContainerInput>
-                <BoxContainer>
-                    <Label>Cep</Label>
-                    <InputSmaller>
-                        <TextProfile>06548-909</TextProfile>
-                    </InputSmaller>
-                </BoxContainer>
+        //         <BoxInput>
+        //             <Label>Data de nascimento:</Label>
+        //             <InputProfile><TextProfile>04/05/1999</TextProfile></InputProfile>
+        //         </BoxInput>
 
-                <BoxContainer>
-                    <Label>Cidade</Label>
-                    <InputSmaller>
-                        <TextProfile>Moema-SP</TextProfile>
-                    </InputSmaller>
-                </BoxContainer>
-            </ContainerInput>
+        //         <BoxInput>
+        //             <Label>CPF</Label>
+        //             <InputProfile><TextProfile>859********</TextProfile></InputProfile>
+        //         </BoxInput>
 
-            <Btn
-                MbButton={MbButton}
-            ><TitleBtn>SALVAR</TitleBtn></Btn>
+        //         <BoxInput>
+        //             <Label>Endereço</Label>
+        //             <InputProfile><TextProfile>Rua Vicenso Silva, 987</TextProfile></InputProfile>
+        //         </BoxInput>
 
-            <Btn><TitleBtn>EDITAR</TitleBtn></Btn>
-        </Container>
-        </Scrool>
+        //         <ContainerInput>
+        //             <BoxContainer>
+        //                 <Label>Cep</Label>
+        //                 <InputSmaller>
+        //                     <TextProfile>06548-909</TextProfile>
+        //                 </InputSmaller>
+        //             </BoxContainer>
+
+        //             <BoxContainer>
+        //                 <Label>Cidade</Label>
+        //                 <InputSmaller>
+        //                     <TextProfile>Moema-SP</TextProfile>
+        //                 </InputSmaller>
+        //             </BoxContainer>
+        //         </ContainerInput>
+
+        //         <Btn
+        //             MbButton={MbButton}
+        //         ><TitleBtn>SALVAR</TitleBtn></Btn>
+
+        //         <Btn><TitleBtn>EDITAR</TitleBtn></Btn>
+        //     </Container>
+        // </Scrool>
+
+        <Text>iyg8ovyu</Text>
     )
 }

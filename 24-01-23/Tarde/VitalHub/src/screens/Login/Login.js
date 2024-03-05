@@ -7,7 +7,11 @@ import { Link, LinkAccount } from "../../components/Link/Style"
 import { Btn, GoogleBtn } from "../../components/Button/Style"
 import { AntDesign } from '@expo/vector-icons';
 import { ContentAccount } from "../../components/ContentAccount/Style"
-export const Login = ()=>{
+export const Login = ({navigation})=>{
+
+    async function Login(){
+        navigation.navigate("Main")
+    }
     return(
         <Container>
             <Logo
@@ -25,7 +29,7 @@ export const Login = ()=>{
 
             <Link>Esqueceu a senha?</Link>
 
-            <Btn>
+            <Btn onPress={e => Login()}>
                 <TitleBtn>ENTRAR</TitleBtn>
             </Btn>
 
@@ -38,7 +42,7 @@ export const Login = ()=>{
 
             <ContentAccount>
                 <TextAccount>Nao tem conta?</TextAccount>
-                <LinkAccount>Crie uma conta agora!</LinkAccount>
+                <LinkAccount onPress={()=> navigation.replace("Cadastro")}>Crie uma conta agora!</LinkAccount>
             </ContentAccount>
             
             

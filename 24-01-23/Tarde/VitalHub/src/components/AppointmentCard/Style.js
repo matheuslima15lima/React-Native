@@ -42,6 +42,20 @@ export const ViewRow = styled.View`
     /* border:2px solid blue; */
     margin-left:${props=> `${props.MarginL}px`};
 `
+export const ViewRowPhoto = styled.View`
+    width:100%;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    align-self: ${props=> `${props.Align}`};
+    margin-right:${props=>`${props.MarginR}px`};
+    border-bottom: 2px solid blue ;
+    margin-left:${props=> `${props.MarginL}px`};
+
+    padding:10px 52px 10px 20px;
+
+    
+`
 
 export const ViewRow2 = styled(ViewRow)`
     gap:3px;
@@ -83,5 +97,9 @@ export const ButtonText= styled.Text`
     font-family :'MontserratAlternates_500Medium';
     color: ${(props) => props.situacao== 'pendente' ? '#C81D25' : '#344F8F'};
     
+`
+
+export const ButtonCancel = styled(ButtonText)`
+    color:#C81D25;
 `
 

@@ -1,10 +1,12 @@
-import { ButtonCard, ButtonText, ViewRow, ViewRow2 } from "../../components/AppointmentCard/Style"
+import { ButtonCancel, ButtonCard, ButtonText, ViewRow, ViewRow2, ViewRowPhoto } from "../../components/AppointmentCard/Style"
 import { BoxInput } from "../../components/BoxInput/Style"
 import { Container, Scrool } from "../../components/Container/Style"
+import { ContentAccountN } from "../../components/ContentAccount/Style"
 import { TextModalEmail, UserQuery } from "../../components/Header/Style"
+import { LinkAccount } from "../../components/Link/Style"
 import { Label, TextProfile, Title, TitleBtn } from "../../components/Title/Style"
 import { ImageLocalQuery } from "../SeeLocalQuery/Style"
-import { ButtonPhoto, ContainerTextInput, InputGrayLarge, TextPhotoNull } from "./Style"
+import { ButtonPhoto, ContainerTextInput, InputGrayLarge, Linha, TextPhotoNull } from "./Style"
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -20,7 +22,9 @@ export const ViewPrescription = ({
     InputGrayW = 100,
     WidthText = 80,
     MarginL = 20,
-    Align='center',
+    Align = 'center',
+    multiline,
+    numberOfLines
     // MarginR=50,
 }) => {
     return (
@@ -55,6 +59,7 @@ export const ViewPrescription = ({
                 <BoxInput>
                     <Label>Descrição da consulta</Label>
                     <InputGrayLarge
+                        
                         InputGrayH={InputGrayH}
                         InputGrayW={InputGrayW}
 
@@ -92,8 +97,6 @@ export const ViewPrescription = ({
                         InputGrayH={InputGrayH}
                         InputGrayW={InputGrayW}
 
-
-
                         placeholder="Medicamento: Advil
                         Dosagem: 50 mg
                         Frequência: 3 vezes ao dia
@@ -109,11 +112,11 @@ export const ViewPrescription = ({
                         <TextPhotoNull>Nenhuma foto informada</TextPhotoNull>
                     </ContainerTextInput>
                 </BoxInput>
-                <ViewRow
+                <ViewRowPhoto
 
                     Align={Align}
                     MarginL={MarginL}
-                    // MarginR={MarginR}
+                // MarginR={MarginR}
                 >
                     <ButtonPhoto>
                         <MaterialIcons name="add-photo-alternate" size={24} color="#fff" />
@@ -121,9 +124,28 @@ export const ViewPrescription = ({
                     </ButtonPhoto>
 
                     <ButtonCard>
-                        <ButtonText>Cancelar</ButtonText>
+                        <ButtonCancel>Cancelar</ButtonCancel>
                     </ButtonCard>
-                </ViewRow>
+                </ViewRowPhoto>
+
+                <Linha/>
+
+                <BoxInput>
+                    <Label>Prescrição médica</Label>
+                    <InputGrayLarge
+                        InputGrayH={InputGrayH}
+                        InputGrayW={InputGrayW}
+
+
+
+                        placeholder="Resultado do exame de sangue : tudo normal"
+
+                    />
+                </BoxInput>
+
+                <ContentAccountN>
+                    <LinkAccount>Voltar</LinkAccount>
+                </ContentAccountN>
 
             </Container>
         </Scrool>
