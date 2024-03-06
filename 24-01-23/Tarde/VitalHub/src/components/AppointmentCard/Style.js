@@ -16,7 +16,7 @@ export const ContainerCardList = styled.TouchableOpacity`
     shadow-radius:10px;
     elevation:5;
     ${props=> props.clickButton ? css`border:2px solid #496BBA` : css`border:transparent`};
-    `
+`
 
 export const ContentCard = styled.View`
     width:${props=> `${props.ContentCardWidth}%`};

@@ -6,7 +6,7 @@ import { Logo } from "../../components/Logo/Style"
 import { Subtitle, Title, TitleBtn } from "../../components/Title/Style"
 
 
-export const ResetPwd = ()=>{
+export const ResetPwd = ({Top=30, navigation})=>{
     return(
        <Container>
            <Logo
@@ -22,7 +22,10 @@ export const ResetPwd = ()=>{
                 placeholder="Confirmar nova senha"
             />
 
-            <Btn>
+            <Btn
+                Top={Top}
+                onPress={()=> navigation.replace("Login")}
+            >
                 <TitleBtn>CONFIRMAR NOVA SENHA</TitleBtn>
             </Btn>
             

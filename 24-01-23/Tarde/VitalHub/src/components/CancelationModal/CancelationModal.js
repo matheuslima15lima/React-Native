@@ -8,7 +8,12 @@ import { ButtonModal } from "../Button/Style"
 export const CancelationModal = ({
     visible,
     setShowModalCancel,
+    BtnTop=30,
+    BtnBottom= 30,
+    BtnWidth= 100,
     ...rest
+   
+
 }) => {
     return (
         <Modal {...rest}
@@ -24,15 +29,16 @@ export const CancelationModal = ({
                     <ModalText>
                         Ao cancelar essa consulta, abrirá uma possível disponibilidade no seu horário, deseja mesmo cancelar essa consulta?
                     </ModalText>
-                    <ButtonModal>
+                    <ButtonModal
+                         BtnTop={BtnTop}
+                         BtnBottom={BtnBottom}
+                         BtnWidth={BtnWidth}
+                    >
                         <TitleBtn>Confirmar</TitleBtn>
                     </ButtonModal>
                     <ContentAccountN>
                         <LinkAccount onPress={()=> setShowModalCancel(false)}>Cancelar</LinkAccount>
                     </ContentAccountN>
-                        
-                    
-                        
                    
 
                 </ModalContent>

@@ -7,7 +7,7 @@ import { Logo } from "../../components/Logo/Style"
 import { Subtitle, Title, TitleBtn } from "../../components/Title/Style"
 
 
-export const CreateAcnt = ()=>{
+export const CreateAcnt = ({navigation,Top= 30})=>{
     return(
         <Container>
             <Logo
@@ -27,12 +27,14 @@ export const CreateAcnt = ()=>{
                 placeholder="Confirmar senha"
             />
 
-            <Btn>
+            <Btn
+                Top={Top}
+            >
                 <TitleBtn>CADASTRAR</TitleBtn>
             </Btn>
 
             <ContentAccountN>
-            <LinkAccount>Cancelar</LinkAccount>
+            <LinkAccount onPress={()=>navigation.replace("Login")}>Cancelar</LinkAccount>
             </ContentAccountN>
             
         </Container>

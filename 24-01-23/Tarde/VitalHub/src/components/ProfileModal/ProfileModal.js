@@ -11,8 +11,20 @@ import { ViewRow, ViewRow2 } from "../AppointmentCard/Style"
 export const ProfileModal = ({
     visible,
     setShowModalPro,
+    BtnTop=30,
+    BtnBottom= 30,
+    BtnWidth= 100,
+    navigation,
     ...rest
 }) => {
+
+    function Nando (){
+        navigation.navigate("Prontuario")
+
+
+        setShowModalPro(false)
+    }
+
     return (
         <Modal {...rest}
             visible={visible}
@@ -36,7 +48,12 @@ export const ProfileModal = ({
                         <TextModalEmail>niccole.sarga@gmail.com</TextModalEmail>
                     </ViewRow2>
 
-                    <ButtonModal>
+                    <ButtonModal
+                            onPress={()=> Nando()}
+                          BtnTop={BtnTop}
+                          BtnBottom={BtnBottom}
+                          BtnWidth={BtnWidth}
+                    >
                         <TitleBtn>INSERIR PRONTUÁRIO</TitleBtn>
                     </ButtonModal>
 

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Logo = styled.Image`
-    width:214;
-    height:120;
+    width:214px;
+    height:120px;
 `
 
 export const ProfileImg = styled.ImageBackground`

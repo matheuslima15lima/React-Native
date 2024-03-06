@@ -20,7 +20,9 @@ const Consultas = [
     { id: 4, nome: "Carlos", situacao: "realizado" },
     { id: 5, nome: "Carlos", situacao: "cancelado" },
 ]
-export const Home = () => {
+export const Home = ({navigation}) => {
+
+
     //state para o estado da lista(cards)
     const [statusLista, setStatusLista] = useState("pendente")
 
@@ -100,6 +102,7 @@ export const Home = () => {
             <ProfileModal
                 visible={showModalPro}
                 setShowModalPro={setShowModalPro}
+                navigation={navigation}
             />
             {/* modal ver prontuario */}
         </Container>

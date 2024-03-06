@@ -13,7 +13,7 @@ end: { x: 1, y: 1 },
     align-items:center;
     justify-content:space-between;
     border-radius: 0px 0px 15px 15px;
-    border-bottom:5;
+    border-bottom:5px;
     height:130px;
     width:100%;
     margin-bottom:20px;
@@ -65,7 +65,7 @@ export const UserDataCard = styled.View`
 export const UserAgeCard = styled.Text`
     font-size: 14px;
     font-family: ' Quicksand_400Regular';
-    color:'#8C8A97';
+    color:#8C8A97;
 `
 
 export const UserQuery = styled.Text`

@@ -7,16 +7,23 @@ import { Link, LinkAccount } from "../../components/Link/Style"
 import { Btn, GoogleBtn } from "../../components/Button/Style"
 import { AntDesign } from '@expo/vector-icons';
 import { ContentAccount } from "../../components/ContentAccount/Style"
+import { Ionicons } from '@expo/vector-icons';
 export const Login = ({navigation})=>{
 
     async function Login(){
         navigation.navigate("Main")
+    }
+
+    async function Create(){
+
     }
     return(
         <Container>
             <Logo
                 source={require('../../../src/assets/images/VitalHub_Logo.png')}
             />
+{/* icone de voltar pagina */}
+{/* <Ionicons name="arrow-back-sharp" size={24} color="black" /> */}
              <Title>Entrar ou criar conta</Title>
 
              <Input
@@ -27,7 +34,7 @@ export const Login = ({navigation})=>{
                   placeholder="Senha"
             />
 
-            <Link>Esqueceu a senha?</Link>
+            <Link onPress={()=>navigation.replace("Recuperar Senha")}>Esqueceu a senha?</Link>
 
             <Btn onPress={e => Login()}>
                 <TitleBtn>ENTRAR</TitleBtn>
@@ -42,7 +49,7 @@ export const Login = ({navigation})=>{
 
             <ContentAccount>
                 <TextAccount>Nao tem conta?</TextAccount>
-                <LinkAccount onPress={()=> navigation.replace("Cadastro")}>Crie uma conta agora!</LinkAccount>
+                <LinkAccount onPress={()=> navigation.replace("Criar conta")}>Crie uma conta agora!</LinkAccount>
             </ContentAccount>
             
             

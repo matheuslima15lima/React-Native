@@ -8,7 +8,7 @@ import { Subtitle, Title, TitleBtn, TitleGoogle } from "../../components/Title/S
 import { CenterSubtitle } from "./Style"
 
 
-export const VerifyEmail = ({MB=30, MT=20, MbButton=30}) => {
+export const VerifyEmail = ({MB=30, MT=20, MbButton=30, navigation}) => {
     return (
         <Container>
             <Logo
@@ -40,6 +40,8 @@ export const VerifyEmail = ({MB=30, MT=20, MbButton=30}) => {
             </ContentAccountN>
 
             <Btn
+
+                onPress={()=> navigation.replace("Redefinir Senha")}
                 MbButton={MbButton}
             >
                 <TitleBtn>Entrar</TitleBtn>

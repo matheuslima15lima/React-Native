@@ -40,6 +40,6 @@ export const BtnQuery = styled(Btn)`
 export const ButtonModal = styled(Btn)`
     margin-top: ${props=> `${props.BtnTop}px`};
     margin-bottom: ${props=> `${props.BtnBottom}px`};
-    width:${props=> `${props.BtnWidth}%`};
+    width: ${props=> `${props.BtnWidth}%`};
 `
 
