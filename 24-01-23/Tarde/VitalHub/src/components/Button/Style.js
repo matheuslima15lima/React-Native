@@ -16,6 +16,10 @@ export const Btn = styled.TouchableOpacity`
     /* padding:12px 8px 12px 8px; */
 `
 
+export const BtnGray = styled(Btn)`
+    background-color:#ACABB7;
+`
+
 export const BtnModal= styled(Btn)`
     margin-top: 143px;
 `

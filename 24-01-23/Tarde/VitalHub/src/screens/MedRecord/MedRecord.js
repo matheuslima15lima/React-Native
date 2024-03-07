@@ -1,6 +1,6 @@
 import { ViewRow2, ViewRowRec } from "../../components/AppointmentCard/Style"
 import { BoxInput, } from "../../components/BoxInput/Style"
-import { Btn } from "../../components/Button/Style"
+import { Btn, BtnGray } from "../../components/Button/Style"
 import { Container, ContainerInput, ContainerInputs, Scrool } from "../../components/Container/Style"
 import { ContentAccountN } from "../../components/ContentAccount/Style"
 import { TextModalEmail, UserQuery } from "../../components/Header/Style"
@@ -10,7 +10,11 @@ import { ProfileImg } from "../../components/Logo/Style"
 import { Label, Subtitle, Title, TitleBtn } from "../../components/Title/Style"
 
 
-export const MedicalRecord = () => {
+export const MedicalRecord = ({
+    navigation,
+    Top= 30,
+    MbButton = 10
+}) => {
     return (
         <Scrool
             showsVerticalScrollIndicator={false}
@@ -62,6 +66,13 @@ export const MedicalRecord = () => {
                     <TitleBtn>SALVAR</TitleBtn>
                 </Btn>
 
+                <BtnGray
+                    onPress={()=> navigation.replace("Edit")}
+                    Top={Top}
+                    MbButton={MbButton}
+                >
+                <TitleBtn>EDITAR</TitleBtn>
+                </BtnGray>
                 <ContentAccountN>
                     <LinkAccount>Cancelar</LinkAccount>
                 </ContentAccountN>

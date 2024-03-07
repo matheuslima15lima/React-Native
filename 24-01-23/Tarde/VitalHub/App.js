@@ -24,6 +24,7 @@ import { SelectDate } from './src/screens/SelectDate/SelectDate';
 import { SeeLocalQuery } from './src/screens/SeeLocalQuery/SeeLocalQuery';
 import { ViewPrescription } from './src/screens/ViewPrescription/ViewPrescription';
 import { Main } from './src/screens/Main/Main';
+import { Edit } from './src/screens/Edit/Edit';
 
 
 
@@ -143,6 +144,11 @@ export default function App() {
           name="Visualizar prescrição"
           component={ViewPrescription}
           options={{ title: "Visualizar prescrição" }}
+        />
+        <Stack.Screen
+          name="Edit" 
+          component={Edit}
+          options={{ title: "Edit"  }}
         />
       </Stack.Navigator>
     </NavigationContainer>
