@@ -12,6 +12,7 @@ import { ContentAccountN } from "../ContentAccount/Style"
 
 
 export const ScheduleModal = ({
+    navigation,
     visible,
     setShowScheduleModal,
     ...rest
@@ -44,7 +45,7 @@ export const ScheduleModal = ({
                         />
                     </BoxInput>
 
-                    <BtnModal>
+                    <BtnModal onPress={()=> navigation.replace("Selecionar Clinica")}>
                         <TitleBtn>CONTINUAR</TitleBtn>
                     </BtnModal>
                     <ContentAccountN>

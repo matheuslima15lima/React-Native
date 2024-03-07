@@ -18,7 +18,7 @@ const Medicos = [
 ]
 
 
-export const SelectDoctor = ({Top=10}) => {
+export const SelectDoctor = ({Top=10,navigation}) => {
 
     const [selectMedico, setSelectMedico] = useState(0);
     const [showModalQuery, setShowModalQuery]= useState(false);
@@ -40,6 +40,7 @@ export const SelectDoctor = ({Top=10}) => {
 
             
             <Btn
+                onPress={()=> navigation.replace("Selecionar Data")}
                 Top={Top}
             ><TitleBtn>CONTINUAR</TitleBtn></Btn>
 

@@ -25,6 +25,7 @@ import { SeeLocalQuery } from './src/screens/SeeLocalQuery/SeeLocalQuery';
 import { ViewPrescription } from './src/screens/ViewPrescription/ViewPrescription';
 import { Main } from './src/screens/Main/Main';
 import { Edit } from './src/screens/Edit/Edit';
+import { PerfilM } from './src/screens/PerfilM/PerfilM';
 
 
 
@@ -149,6 +150,11 @@ export default function App() {
           name="Edit" 
           component={Edit}
           options={{ title: "Edit"  }}
+        />
+        <Stack.Screen
+          name="PerfilM" 
+          component={PerfilM}
+          options={{ title: "PerfilM"  }}
         />
       </Stack.Navigator>
     </NavigationContainer>

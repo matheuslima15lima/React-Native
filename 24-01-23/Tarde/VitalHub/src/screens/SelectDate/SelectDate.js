@@ -10,6 +10,7 @@ import { Subtitle, Title, TitleBtn } from "../../components/Title/Style"
 import { QueryModal } from "../../components/QueryModal/QueryModal"
 
 export const SelectDate = ({
+    navigation,
     align='flex-start',
     Top=10,
     MbButton= 20,
@@ -45,6 +46,7 @@ export const SelectDate = ({
             </ContentAccountN>
 
             <QueryModal
+                navigation={navigation}
                 visible={showModalQuery}
                 setShowModalQuery={setShowModalQuery}
 

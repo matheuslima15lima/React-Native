@@ -13,7 +13,7 @@ export const ContentAccountN = styled(ContentAccount)`
     justify-content:center;
     gap:20px;
     margin-bottom: ${Props=> `${Props.MB}px`};
-    margin-top: ${Props=>`${Props.MT}px`}
+    margin-top: ${Props=>`${Props.MT}px`};
 `
 
 export const ContentAccountCenter = styled.View`

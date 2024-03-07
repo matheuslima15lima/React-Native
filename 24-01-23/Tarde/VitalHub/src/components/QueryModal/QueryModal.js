@@ -10,6 +10,7 @@ import { CenterSubtitle } from "../../screens/VerifyEmail/Style"
 
 
 export const QueryModal = ({
+    navigation,
     visible,
     setShowModalQuery,
     AlignBox = 'baseline',
@@ -81,7 +82,9 @@ export const QueryModal = ({
                         <TextData>Rotina</TextData>
                     </ContainerQueryData>
 
-                    <Btn>
+                    <Btn
+                        onPress={()=> navigation.replace("Main")}
+                    >
                         <TitleBtn>CONFIRMAR</TitleBtn>
                     </Btn>
 

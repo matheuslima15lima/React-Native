@@ -3,7 +3,7 @@ import { BtnAppoiment } from "../../components/Button/BtnAppoiment"
 import CalendarHome from "../../components/CalendarHome/CalendarHome"
 import { Container } from "../../components/Container/Style"
 import { BoxUser, DataUser, FilterAppoinment, HeaderContainer, IconContainer, NomeUser, TextDefault } from "../../components/Header/Style"
-import { ImageUser } from "../../components/Logo/Style"
+import { BtnImage, ImageUser } from "../../components/Logo/Style"
 import { ListComponent } from "../../components/List/List"
 import { CancelationModal } from "../../components/CancelationModal/CancelationModal"
 import { ProfileModal } from "../../components/ProfileModal/ProfileModal"
@@ -25,7 +25,7 @@ const Consultas = [
     { id: 4, nome: "Carlos", situacao: "realizado" },
     { id: 5, nome: "Carlos", situacao: "cancelado" },
 ]
-export const HomePacient = () => {
+export const HomePacient = ({navigation}) => {
 
 
     const [showModalDocPro, setShowModalDocPro] = useState(false);
@@ -45,14 +45,16 @@ export const HomePacient = () => {
         <Container>
             <HeaderContainer>
                 <BoxUser>
+                <BtnImage onPress={()=> navigation.replace("Pagina de perfil")}>
                     <ImageUser
                         source={require('../../../src/assets/images/RichardKosta.png')}
                     />
-
+                </BtnImage>
                     <DataUser>
                         <TextDefault>Bem-Vindo</TextDefault>
                         <NomeUser>Richard Kosta</NomeUser>
                     </DataUser>
+
                 </BoxUser>
 
                 <IconContainer>
@@ -89,6 +91,7 @@ export const HomePacient = () => {
                 renderItem={({ item }) =>
                     statusLista == item.situacao && (
                         <CardDoc
+                            navigation={navigation}
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppoiment={() => setShowModalAppointment(true)}
@@ -118,11 +121,13 @@ export const HomePacient = () => {
             </ButtonSchedule>
 
             <ScheduleModal
+                navigation={navigation}
                 visible={showScheduleModal}
                 setShowScheduleModal={setShowScheduleModal}
             />
             {/* modal ver prontuario */}
             <DoctorModal 
+                navigation={navigation}
                 visible={showModalDocPro}
                 setShowModalDocPro={setShowModalDocPro}
             />

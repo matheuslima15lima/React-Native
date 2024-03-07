@@ -4,7 +4,7 @@ import { BtnQWhite, BtnQuery } from "../../components/Button/Style"
 import CalendarHome from "../../components/CalendarHome/CalendarHome"
 import { Container } from "../../components/Container/Style"
 import { BoxUser, ContainerCard, DataUser, FilterAppoinment, HeaderContainer, IconContainer, NomeUser, NomeUserBlack, TextDefault, UserAgeCard, UserDataCard, UserNameCard, UserQuery } from "../../components/Header/Style"
-import { ImagePacient, ImageUser } from "../../components/Logo/Style"
+import { BtnImage, ImagePacient, ImageUser } from "../../components/Logo/Style"
 import { TitleQuery, TitleQuery2 } from "../../components/Title/Style"
 import { BtnAppoiment } from "../../components/Button/BtnAppoiment"
 import { ListComponent } from "../../components/List/List"
@@ -37,10 +37,14 @@ export const Home = ({navigation}) => {
 
         <Container>
             <HeaderContainer>
-                <BoxUser>
+                <BoxUser
+                        
+                >   
+                    <BtnImage onPress={()=> navigation.replace("PerfilM")}>
                     <ImageUser
                         source={require('../../../src/assets/images/Medico.png')}
                     />
+                    </BtnImage>
 
                     <DataUser>
                         <TextDefault>Bem-Vindo</TextDefault>
@@ -83,6 +87,7 @@ export const Home = ({navigation}) => {
                 renderItem={({ item }) =>
                     statusLista == item.situacao && (
                         <AppoimentCard
+                            navigation={navigation}
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppoiment={() => setShowModalAppointment(true)}

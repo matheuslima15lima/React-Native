@@ -10,7 +10,7 @@ import { ViewRow, ViewRow2 } from "../AppointmentCard/Style"
 
 
 export const DoctorModal = ({
-    
+    navigation,
     visible,
     setShowModalDocPro,
     BtnTop=30,
@@ -53,6 +53,7 @@ export const DoctorModal = ({
                 </ViewRow2>
 
                 <ButtonModal
+                    onPress={()=> navigation.replace("Local da Consulta")}
                     BtnTop={BtnTop}
                     BtnWidth={BtnWidth}
                     BtnBottom={BtnBottom}

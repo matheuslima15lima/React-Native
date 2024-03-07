@@ -1,13 +1,16 @@
 
 import { BoxContainer, BoxInput } from "../../components/BoxInput/Style"
 import { Container, ContainerInput } from "../../components/Container/Style"
+import { ContentAccountN } from "../../components/ContentAccount/Style"
 import { InputProfile, InputSmaller } from "../../components/Input/Style"
+import { LinkAccount } from "../../components/Link/Style"
 import { Label, Subtitle, TextProfile, Title } from "../../components/Title/Style"
 import { CenterSubtitle } from "../VerifyEmail/Style"
 import { ImageLocalQuery } from "./Style"
 
 
 export const SeeLocalQuery = ({
+    navigation,
     WidthImage = 100,
     HeightImage = 324,
     marginTop = 30,
@@ -56,6 +59,11 @@ export const SeeLocalQuery = ({
                     </InputSmaller>
                 </BoxContainer>
             </ContainerInput>
+
+            <ContentAccountN>
+                    <LinkAccount
+                        onPress={() => navigation.replace("Main")}>Voltar</LinkAccount>
+                </ContentAccountN>
         </Container>
     )
 }

@@ -95,13 +95,15 @@ export const Edit = (
 
                 <Btn
 
+
+                    onPress={()=> navigation.replace("Prontuario")}
                     MbButton={MbButton}
                 >
                     <TitleBtn>Editar</TitleBtn>
                 </Btn>
 
                 <ContentAccountN>
-                    <LinkAccount>Cancelar</LinkAccount>
+                    <LinkAccount onPress={()=> navigation.replace("Main")}>Cancelar</LinkAccount>
                 </ContentAccountN>
             </Container>
         </Scrool>

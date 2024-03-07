@@ -64,6 +64,10 @@ export const Navegacao = ({navigation})=>{
                     title="Edit" 
                     onPress={()=> navigation.navigate("Edit")}    
             />
+            <Button
+                    title="PerfilM" 
+                    onPress={()=> navigation.navigate("PerfilM")}    
+            />
          
         </View>
     )

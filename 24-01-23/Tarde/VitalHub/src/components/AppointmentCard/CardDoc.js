@@ -18,6 +18,7 @@ export const CardDoc = ({
     MarginL = 50,
     ContentCardWidth = 70,
     Justify = 'center',
+    navigation
 }) => {
     return (
         <ContainerCardList
@@ -73,7 +74,7 @@ export const CardDoc = ({
                                 </ButtonCard>
                             ) :
                                 (
-                                    <ButtonCard onPress={onPressShowPro}>
+                                    <ButtonCard onPress={()=> navigation.replace("Visualizar prescrição")}>
                                         <ButtonText situacao={situacao}>Ver prontuario</ButtonText>
                                     </ButtonCard>
                                 )

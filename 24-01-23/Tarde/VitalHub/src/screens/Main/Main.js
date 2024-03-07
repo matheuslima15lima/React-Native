@@ -3,11 +3,13 @@ import { Home } from '../Home/Home';
 import { Profile } from '../Profile/Profile';
 import { ContentIcon, TextIcon } from './Style';
 import { FontAwesome, FontAwesome5 } from '@expo/vector-icons'
+import { PerfilM } from '../PerfilM/PerfilM';
+import { HomePacient } from '../HomePacient/HomePacient';
 const BottomTab = createBottomTabNavigator();
 export const Main = () => {
     return (
         <BottomTab.Navigator
-            initialRouteName="Home"
+            initialRouteName="Pagina do paciente"
             screenOptions={({ route }) => ({
                 tabBarStyle: { backgroundColor: "#FFFFFF", height: 80, paddingTop: 10 },
                 tabBarActiveBackgroundColor: "transparent",
@@ -15,7 +17,7 @@ export const Main = () => {
                 headerShown: false,
 
                 tabBarIcon: ({ focused }) => {
-                    if (route.name === "Home") {
+                    if (route.name === "Pagina do paciente") {
                         return (
                             <ContentIcon
                                 tabBarActiveBackgroundColor={focused ? "#ECF2FF" : "transparent"}
@@ -31,7 +33,7 @@ export const Main = () => {
                                 tabBarActiveBackgroundColor={focused ? "#ECF2FF" : "transparent"}
                             >
                                 <FontAwesome5 name="user-circle" size={18} color={"#4E4B59"} />
-                                {focused && <TextIcon>Agenda</TextIcon>}
+                                {focused && <TextIcon>Perfil</TextIcon>}
                             </ContentIcon>
                         )
 
@@ -40,13 +42,13 @@ export const Main = () => {
             })}
         >
             <BottomTab.Screen
-                name="Home"
-                component={Home}
+                name="Pagina do paciente"
+                component={HomePacient}
             />
 
             <BottomTab.Screen
-                name="Pagina de perfil"
-                component={Profile}
+                name="PerfilM"
+                component={PerfilM}
 
             />
         </BottomTab.Navigator>

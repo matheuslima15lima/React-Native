@@ -28,6 +28,8 @@ const clinicas = [
 export const SelectClinic = (
     
     {
+        navigation,
+        
         marginBo=20,
     
         marginTop=10,
@@ -62,7 +64,7 @@ export const SelectClinic = (
 
             />
 
-            <Btn><TitleBtn>CONTINUAR</TitleBtn></Btn>
+            <Btn onPress={()=> navigation.replace("Selecionar Medico")}><TitleBtn>CONTINUAR</TitleBtn></Btn>
 
             <ContentAccountN><LinkAccount>Cancelar</LinkAccount></ContentAccountN>
         </Container>

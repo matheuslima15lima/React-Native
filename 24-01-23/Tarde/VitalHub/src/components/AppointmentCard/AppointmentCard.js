@@ -3,7 +3,10 @@ import { ImagePacient } from "../Logo/Style"
 import { AntDesign } from '@expo/vector-icons';
 import { TitleBtn } from "../Title/Style";
 import { ButtonCard, ButtonText, ContainerCardList, ContentCard, ContentHour, ViewRow } from "./Style";
+import { useScrollToTop } from "@react-navigation/native";
+import { useState } from "react";
 export const AppoimentCard = ({
+    navigation,
     situacao = "pendente",
     onPressCancel,
     onPressAppoiment,
@@ -17,6 +20,8 @@ export const AppoimentCard = ({
     ContentCardWidth = 70,
     Justify= 'center',
 }) => {
+    const {profile, setProfile} = useState("Paciente") 
+
     return (
         <ContainerCardList
             fieldPadding={fieldPadding}
@@ -65,7 +70,7 @@ export const AppoimentCard = ({
                                 </ButtonCard>
                             ) :
                                 (
-                                    <ButtonCard onPress={onPressShowPro}>
+                                    <ButtonCard onPress={profile !== "Paciente" ? onPressShowPro: ()=> navigation.replace("Visualizar prescrição")}>
                                         <ButtonText situacao={situacao}>Ver prontuario</ButtonText>
                                     </ButtonCard>
                                 )
