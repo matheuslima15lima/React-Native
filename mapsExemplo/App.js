@@ -6,14 +6,25 @@ import MapView, {Marker , PROVIDER_GOOGLE} from 'react-native-maps'
 import { mapskey } from './Utils/mapsKey';
 import{
 requestForegroundPermissionsAsync, // Solicito a permissao de localizacao
-getCurrentPositionAsync //Captura a localizacao atual
+getCurrentPositionAsync ,//Captura a localizacao atual
+
+  watchPositionAsync, //Captura em tempos a localizacao
+  LocationAccuracy
 } from 'expo-location'
 
 import MapViewDirections from 'react-native-maps-directions'; 
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 export default function App() {
+
+  const mapReference = useRef(null);
+  const [finalPosition, setPosition] = useState({
+
+    latitude : -23.7141,
+    longitude : -46.4137
+  })
+
   const [initialPosition , setInicialPosition] = useState(null)
 
   async function CapturarLocalizacao(){
@@ -28,15 +39,51 @@ export default function App() {
     }
   }
 
+
+  async function RecarregarVisualizacaoMapa(){
+    if(mapReference.current && initialPosition){
+      await mapReference.current.fitToCoordinates(
+        [
+         { latitude : initialPosition.coords.latitude, longitude : initialPosition.coords.longitude},
+         {latitude : finalPosition.latitude, longitude : finalPosition.longitude}
+        ],
+
+        {
+          edgePadding : {top: 60, right: 60, bottom:60, left:60},
+          animated : true
+        }
+      )
+    }
+  }
   useEffect(()=>{
     CapturarLocalizacao()
-  },[1000])
+
+    //Capturar localizacao em tempo real
+    watchPositionAsync({
+      accuracy : LocationAccuracy.High,
+      timeInterval : 1000,
+      distanceInterval : 1
+    }, async(response)=> {
+      await setInicialPosition(response)
+
+      mapReference.current?.animateCamera({
+        pitch: 60,
+        center: response.coords
+      })
+    })
+  },[10000])
+
+  useEffect(()=>{
+    RecarregarVisualizacaoMapa()
+  },[initialPosition])
   return (
     <View style={styles.container}>
       {
         initialPosition != null?
         (
           <MapView
+
+            ref={mapReference}
 
           initialRegion={{
             latitude : initialPosition.coords.latitude,

@@ -4,6 +4,7 @@ import { Container, ContainerInput } from "../../components/Container/Style"
 import { ContentAccountN } from "../../components/ContentAccount/Style"
 import { InputProfile, InputSmaller } from "../../components/Input/Style"
 import { LinkAccount } from "../../components/Link/Style"
+import { MapComponent } from "../../components/MapComponent/MapComponent"
 import { Label, Subtitle, TextProfile, Title } from "../../components/Title/Style"
 import { CenterSubtitle } from "../VerifyEmail/Style"
 import { ImageLocalQuery } from "./Style"
@@ -19,12 +20,14 @@ export const SeeLocalQuery = ({
 }) => {
     return (
         <Container>
-            <ImageLocalQuery
+            {/* <ImageLocalQuery
 
                 WidthImage={WidthImage}
                 HeightImage={HeightImage}
                 source={require('../../../src/assets/images/image1.png')}
-            />
+            /> */}
+
+            <MapComponent/>
 
             <Title
                 marginTop={marginTop}
