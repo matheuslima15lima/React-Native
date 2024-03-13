@@ -16,7 +16,7 @@ import {
 import MapViewDirections from "react-native-maps-directions";
 
 import { useEffect, useState, useRef } from "react";
-import { ActivityIndicator, View } from "react-native";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { LocalContainer } from "./Style";
 
 export const MapComponent = () => {
@@ -101,7 +101,7 @@ export const MapComponent = () => {
           }}
           
         //   style={styles.map}
-          customMapStyle={grayMapStyle}
+          // customMapStyle={grayMapStyle}
         >
           {/* Criando um marcador no mapa */}
           <Marker
@@ -113,6 +113,7 @@ export const MapComponent = () => {
             description="Qualquer lugar do meu mapa"
             pinColor="blue"
           />
+       
 
           {/* <Marker
             coordinate={{
@@ -148,11 +149,11 @@ export const MapComponent = () => {
   );
 };
 
-// const styles = StyleSheet.create({
+const styles = StyleSheet.create({
    
   
-//     map:{
-//         width:'100%',
-//         height:324
-//     }
-//   });
+    map:{
+        width:'100%',
+        height:324
+    }
+  });
