@@ -5,7 +5,7 @@
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 
 import { mapskey } from "../../utils/mapsKey";
-import FontAwesome from '@expo/vector-icons/fontAwesome'
+// import FontAwesome from '@expo/vector-icons/fontAwesome'
 import {
   requestForegroundPermissionsAsync, // Solicito a permissao de localizacao
   getCurrentPositionAsync, //Captura a localizacao atual

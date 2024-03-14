@@ -1,3 +1,4 @@
+import { TouchableOpacity } from "react-native"
 import { ButtonCancel, ButtonCard, ButtonText, ViewRow, ViewRow2, ViewRowPhoto } from "../../components/AppointmentCard/Style"
 import { BoxInput } from "../../components/BoxInput/Style"
 import { Container, Scrool } from "../../components/Container/Style"
@@ -105,6 +106,10 @@ export const ViewPrescription = ({
                     />
                 </BoxInput>
 
+
+                <TouchableOpacity style={{width:'100%', alignItems:'center'}}>
+
+                
                 <BoxInput>
                     <Label>Exames médicos</Label>
                     <ContainerTextInput>
@@ -112,6 +117,7 @@ export const ViewPrescription = ({
                         <TextPhotoNull>Nenhuma foto informada</TextPhotoNull>
                     </ContainerTextInput>
                 </BoxInput>
+                </TouchableOpacity>
                 <ViewRowPhoto
 
                     Align={Align}
