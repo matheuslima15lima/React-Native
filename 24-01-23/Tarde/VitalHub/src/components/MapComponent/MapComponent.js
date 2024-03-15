@@ -91,7 +91,7 @@ export const MapComponent = () => {
     <>
       {initialPosition != null ? (
         <MapView
-        customMapStyle={dark}
+        // customMapStyle={dark}
           ref={mapReference}
           style={styles.map}
           provider={PROVIDER_GOOGLE}

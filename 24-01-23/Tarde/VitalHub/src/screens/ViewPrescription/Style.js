@@ -26,6 +26,11 @@ export const ContainerTextInput = styled.View `
         margin-top: 10px;
 `
 
+export const ImagePhoto =styled.Image`
+ width: 100%;
+ height:111px;
+`
+
 export const TextPhotoNull = styled.Text`
     font-size: 14px;
     font-family: 'MontserratAlternates_500Medium';
@@ -48,3 +53,5 @@ export const Linha = styled.View`
     width:90%;
     border:1px solid black;
 `
+
+

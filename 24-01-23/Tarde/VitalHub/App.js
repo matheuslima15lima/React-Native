@@ -26,6 +26,7 @@ import { ViewPrescription } from './src/screens/ViewPrescription/ViewPrescriptio
 import { Main } from './src/screens/Main/Main';
 import { Edit } from './src/screens/Edit/Edit';
 import { PerfilM } from './src/screens/PerfilM/PerfilM';
+import { CameraComponent } from './src/components/CameraComponent/CameraComponent';
 
 
 
@@ -156,6 +157,7 @@ export default function App() {
           component={PerfilM}
           options={{ title: "PerfilM"  }}
         />
+      
       </Stack.Navigator>
     </NavigationContainer>
   );
