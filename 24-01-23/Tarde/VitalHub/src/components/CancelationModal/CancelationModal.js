@@ -4,7 +4,25 @@ import { LinkAccount } from "../Link/Style"
 import { ContentAccount, ContentAccountN } from "../ContentAccount/Style"
 import { ModalContent, ModalText, PacientModal } from "./Style"
 import { ButtonModal } from "../Button/Style"
+//importar os recursos do expo notitfications
+import * as Notifications from "expo-notifications"
+//solicita permissoes de notificacao ao iniciar o app
+Notifications.requestPermissionsAsync();
 
+//define como as notificacoes devem ser tratadas quando recebidas
+Notifications.setNotificationHandler({
+    handleNotification: async()=>({
+      //mostrar o alerta quando a notificacao for recebida
+      shouldShowAlert: true,
+  
+      //reproduz som ao receber notificacao
+      shouldPlaySound: true,
+  
+      //numero de notificacoes no icone do app
+      shouldSetBadge:false,
+  
+    })
+  })
 export const CancelationModal = ({
     visible,
     setShowModalCancel,
@@ -16,6 +34,29 @@ export const CancelationModal = ({
 
 
 }) => {
+
+
+      //funcao para lidar com chamada de notificacao
+  const handleCallNotifications = async()=>{
+    const {status} = await Notifications.getPermissionsAsync();
+    setShowModalCancel(false)
+    if(status !== "granted"){
+      alert("você não deixou as notificações ativas")
+      return;
+    }
+
+    //agenda uma notificação
+    await Notifications.scheduleNotificationAsync({
+      content:{
+        title:"Bem vindo ao SENAI!",
+        body:"Noticação recebida",
+        sound: "GTA-V-Marimba-Remix.mp3"
+      },
+
+      trigger:null
+    })
+  }
+
     return (
         <Modal {...rest}
             visible={visible}
@@ -34,11 +75,13 @@ export const CancelationModal = ({
                         BtnTop={BtnTop}
                         BtnBottom={BtnBottom}
                         BtnWidth={BtnWidth}
-                        onPress={() => setShowModalCancel(false)}
+                        
+                        onPress={handleCallNotifications}
                     >
                         <TitleBtn
 
                         >CONFIRMAR
+
                         </TitleBtn>
                     </ButtonModal>
                     <ContentAccountN>
