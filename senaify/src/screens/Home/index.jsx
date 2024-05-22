@@ -139,7 +139,7 @@ const Home = ({ token, atual, audio, setAtual, setAudio }) => {
                           numColumns={1}
                           renderItem={ ({ item }) => (
                             <Music
-                              label={"music-item"}
+                              label="icon-button"
 
                               play={atual == item.track.preview_url}
                               onPress={() => playSound(item.track.preview_url, atual, setAtual, audio, setAudio)}

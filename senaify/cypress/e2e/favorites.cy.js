@@ -9,7 +9,7 @@ describe('template spec', () => {
   })
 
   it("Verifica se há músicas favoritas", () => {
-    cy.get("[aria-label='music-item']").should("have.length.greaterThan", 0)
+    cy.get("[aria-label='music-item-fav']").should("have.length.greaterThan", 0)
   })
 
   let musicaEscolhida;
@@ -20,7 +20,7 @@ describe('template spec', () => {
   // })
 
   it("Reproduzir uma música específica", () => {
-    musicaEscolhida = cy.get("[aria-label='music-item']").contains("Miss The Rage")
+    musicaEscolhida = cy.get("[aria-label='music-item-fav']").contains("Miss The Rage")
     musicaEscolhida.click()
   })
 })
