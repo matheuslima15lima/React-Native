@@ -53,7 +53,7 @@ const Search = ({ token, atual, audio, setAtual, setAudio }) => {
 
   return (
     <LinearGradient
-      style={{ flex : 1 }}
+      style={{ flex : 1, paddingTop: 10 }}
       colors={['#2e0000', '#121212', '#121212', '#001b09']}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
@@ -65,6 +65,7 @@ const Search = ({ token, atual, audio, setAtual, setAudio }) => {
 
           <ContainerInput>
             <Input
+              testID="campoBusca" //fake id
               value={search}
               onChangeText={txt => setSearch(txt)}
             />
@@ -79,6 +80,7 @@ const Search = ({ token, atual, audio, setAtual, setAudio }) => {
             data={ lista }
             renderItem={ ({ item }) => (
               <Music
+                label={'music-item'}
                 play={ atual == item.preview_url }
                 onPress={() => playSound(item.preview_url, atual, setAtual, audio, setAudio)}
                 // onPress={() => playSound(item.preview_url) }

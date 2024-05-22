@@ -13,7 +13,7 @@ import { ImageAlbum, ImageMusic } from "../Image/styles";
 import { Paragraph, SubParagraph } from "../Text/Paragraph/styles";
 import { ContainerMusic, ContainerSound } from "../Container/styles";
 
-export const Album = ({ image, name, description, onPress, label }) => {
+export const Album = ({ label, image, name, description, onPress }) => {
   return (
     <CardAlbum onPress={onPress} accessibilityLabel={label}>
       <ImageAlbum 
@@ -27,7 +27,7 @@ export const Album = ({ image, name, description, onPress, label }) => {
   )
 }
 
-export const Music = ({ image, name, artist, play = false, isLike = false, like, onPress, label }) => {
+export const Music = ({ label, image, name, artist, play = false, isLike = false, like, onPress }) => {
   const [isLiked, setIsLiked] = useState(isLike);
 
   // Função para curtir e descurtir a música
@@ -62,11 +62,11 @@ export const Music = ({ image, name, artist, play = false, isLike = false, like,
       </ContainerMusic>
 
       { like && (
-        <ButtonLike onPress={() => handleLike()}>
+        <ButtonLike onPress={() => handleLike()} testID="icon-button" >
           {
             isLiked
-              ? <FontAwesome name="heart" size={18} color="#FF0000" />
-              : <FontAwesome name="heart-o" size={18} color="#1ED760"/>
+              ? <FontAwesome name="heart" size={18} color="#FF0000" accessibilityLabel="icon-like"/>
+              : <FontAwesome name="heart-o" size={18} color="#1ED760" accessibilityLabel="icon-deslike"/>
           }
         </ButtonLike>
       )}
